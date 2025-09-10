@@ -1,24 +1,37 @@
-import logo from './logo.svg';
 import './App.css';
+import { Routes, Route } from "react-router-dom";
+
+import Navbar from "./components/Navbar";
+import HashScroll from "./components/HashScroll";
+import Hero from "./components/Hero";
+import Projects from "./components/Projects";
+import CaseStudyScrabbleHelper from "./pages/CaseStudyScrabbleHelper";
+import CaseStudyPortfolio from "./pages/CaseStudyPortfolio";
+import CaseStudyThree from "./pages/CaseStudyThree";
+import CaseStudyFour from "./pages/CaseStudyFour";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Navbar />
+      <HashScroll />
+      <Routes>
+        <Route
+          path="/"
+          element={(
+            <>
+              <Hero />
+              <Projects />
+            </>
+          )}
+        />
+        <Route path="/projects/scrabble-helper" element={<CaseStudyScrabbleHelper />} />
+        <Route path="/projects/portfolio" element={<CaseStudyPortfolio />} />
+        <Route path="/projects/three" element={<CaseStudyThree />} />
+        <Route path="/projects/four" element={<CaseStudyFour />} />
+      </Routes>
+      {/* More sections: Experience, Skills, Footer */}
+    </>
   );
 }
 
