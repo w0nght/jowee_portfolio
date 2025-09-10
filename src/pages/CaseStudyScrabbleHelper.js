@@ -2,19 +2,25 @@ import Tag from "../components/Tag";
 import VideoPlayer from "../components/VideoPlayer";
 import demoVideo from "../assets/scrabblehelper_demo_vid_720.mp4";
 import ScreenshotGrid from "../components/ScreenshotGrid";
-import inputUiPng from "../images/dark_mode_view_1.png";
-import ssResultsPng from "../images/sh_wild_result_1.png";
-import ssResultsPngDark from "../images/sh_wild_result_2.png";
-import ssWordFilter from "../images/sh_word_filter_1.png";
-import ssWordSort from "../images/sh_result_sorting_1.png";
-import ssDictSort from "../images/sh_dict_sort_1.png";
+// Best practice: organize per case study under src/assets/images/case-studies/<slug>
+// Scrabble Helper assets
+import inputUiPng from "../assets/images/case-studies/scrabble-helper/dark_mode_view_1.png";
+import ssResultsPng from "../assets/images/case-studies/scrabble-helper/sh_wild_result_1.png";
+import ssResultsPngDark from "../assets/images/case-studies/scrabble-helper/sh_wild_result_2.png";
+import ssWordFilter from "../assets/images/case-studies/scrabble-helper/sh_word_filter_1.png";
+import ssWordSort from "../assets/images/case-studies/scrabble-helper/sh_result_sorting_1.png";
+import ssDictSort from "../assets/images/case-studies/scrabble-helper/sh_dict_sort_1.png";
 
 export default function CaseStudyScrabbleHelper() {
     return (
         <section id="case-study" className="case-study">
             <h1>Scrabble Helper Case Study</h1>
             <div className="tags">
-                {[{ label: "HTML", icon: "html" }, { label: "CSS", icon: "css" }, { label: "JavaScript", icon: "javascript" }, { label: "Vanilla JS", icon: "vanilla-js" }].map((t) => (
+                {[{ label: "HTML", icon: "html" },
+                { label: "CSS", icon: "css" },
+                { label: "JavaScript", icon: "javascript" },
+                { label: "Vanilla JS", icon: "vanilla-js" },
+                { label: "Git", icon: "git" }].map((t) => (
                     <Tag key={t.label} label={t.label} icon={t.icon} />
                 ))}
             </div>
@@ -81,16 +87,16 @@ export default function CaseStudyScrabbleHelper() {
 
                 <figure className="screenshot-card sand">
                     <img src={inputUiPng} alt="Light mode" style={{ height: "640px", width: "100%", objectFit: "cover" }} />
-                    <figcaption>Light mode</figcaption>
+                    <figcaption>Dark mode</figcaption>
                 </figure>
             </div>
             <ScreenshotGrid
                 items={[
-                    { src: ssResultsPng, alt: "Wildcard results", caption: "Wildcard results in Light mode.", bg: "mist" },
-                    { src: ssResultsPngDark, alt: "Wildcard results", caption: "Wildcard results in Dark mode.", bg: "sand" },
-                    { src: ssWordFilter, alt: "Word length and required letters filtering", caption: "Word length and required letters filtering.", bg: "mist" },
-                    { src: ssWordSort, alt: "Word length and required letters filtering", caption: "Sort results (Score, Length, Alphabetical).", bg: "mist" },
-                    { src: ssDictSort, alt: "Dictionary selection", caption: "Dictionary selection with caching for fast switching (Collins 2019, OTCWL 2016, SOWPODS).", bg: "sand" },
+                    { src: ssResultsPng, alt: "Wildcard results", caption: "Wildcard results in Light mode.", bg: "sand" },
+                    { src: ssResultsPngDark, alt: "Wildcard results", caption: "Wildcard results in Dark mode", bg: "sand" },
+                    { src: ssWordFilter, alt: "Word length and required letters filtering", caption: "Word length and required letters filtering", bg: "mist" },
+                    { src: ssWordSort, alt: "Word length and required letters filtering", caption: "Sort results (Score, Length, Alphabetical)", bg: "mist" },
+                    { src: ssDictSort, alt: "Dictionary selection", caption: "Dictionary selection with caching for fast switching (Collins 2019, OTCWL 2016, SOWPODS)", bg: "sand" },
                 ]}
             />
         </section>

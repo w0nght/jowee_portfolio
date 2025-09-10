@@ -245,6 +245,19 @@ CASE STUDY PAGES
   padding-left: 1.25rem;
 }
 
+/* =============================
+CODE FEEL STYLING
+============================= */
+.inline-code {
+  font-family: 'Fira Code', 'Source Code Pro', monospace;
+  background: #1e1e1e;
+  color: #ffb84d;
+  padding: 0.15rem 0.4rem;
+  border-radius: 4px;
+  font-size: 0.9em;
+  white-space: nowrap;
+}
+
 .video-player {
   max-width: 800px;
   margin: 1rem 0;

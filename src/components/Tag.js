@@ -18,6 +18,9 @@ import {
     faDatabase,
     faPalette,
     faCubes,
+    faMagnifyingGlass,
+    faUniversalAccess,
+    faArrowsRotate,
 } from "@fortawesome/free-solid-svg-icons";
 
 const iconMap = {
@@ -39,6 +42,9 @@ const iconMap = {
     miro: faCode, // fallback: generic code icon
     photoshop: faPalette, // fallback: palette icon
     kubernetes: faCubes, // fallback: cubes icon
+    elastic: faMagnifyingGlass, // fallback: elastic brand not in FA Free
+    accessibility: faUniversalAccess,
+    agile: faArrowsRotate,
 };
 
 export default function Tag({ label, icon }) {

@@ -1,6 +1,8 @@
 import Tag from "./Tag";
-import dark_mode_view_1 from "../images/dark_mode_view_1.png";
-import light_mode_view_2 from "../images/light_mode_view_2.png";
+import dark_mode_view_1 from "../assets/images/case-studies/scrabble-helper/dark_mode_view_1.png";
+import my_ss_1 from "../assets/images/case-studies/jowee-portfolio/my_ss_1.png";
+import tafe_ss_1 from "../assets/images/case-studies/tafeqld/ss_1.png";
+import aldi_ss_1 from "../assets/images/case-studies/symbio/ss_1.png";
 
 function ProjectCard({ title, description, tags, images, liveUrl, caseStudyUrl }) {
     return (
@@ -43,6 +45,7 @@ function ProjectScrabbleHelper() {
         { label: "CSS", icon: "css" },
         { label: "JavaScript", icon: "javascript" },
         { label: "Vanilla JS", icon: "vanilla-js" },
+        { label: "Git", icon: "git" }
     ];
     const images = [
         { src: dark_mode_view_1, alt: "Scrabble Helper screenshot Dark Mode" },
@@ -67,14 +70,16 @@ function ProjectPortfolio() {
         { label: "HTML", icon: "html" },
         { label: "CSS", icon: "css" },
         { label: "JavaScript", icon: "javascript" },
+        { label: "Git", icon: "git" }
+
     ];
     const images = [
-        { src: light_mode_view_2, alt: "Responsive Portfolio screenshot", width: 200, height: 400 },
+        { src: my_ss_1, alt: "Responsive Portfolio screenshot" },
     ];
     return (
         <ProjectCard
             title="Responsive Portfolio"
-            description="This portfolio site itself! A responsive portfolio site built with React, using reusable components to keep the code clean, consistent, and scalable. Showcases my design, accessibility, and front-end development skills."
+            description="This portfolio site itself! A responsive portfolio site built with React, using reusable components to keep the code clean, consistent, and scalable."
             tags={tags}
             images={images}
             liveUrl={undefined}
@@ -83,43 +88,52 @@ function ProjectPortfolio() {
     );
 }
 
-function ProjectThree() {
+function ProjectTAFE() {
     const tags = [
-        { label: "PHP", icon: "php" },
+        { label: "HTML", icon: "html" },
+        { label: "CSS", icon: "css" },
+        { label: "JavaScript", icon: "javascript" },
         { label: "Bootstrap", icon: "bootstrap" },
-        { label: "Docker", icon: "docker" },
+        { label: "Git", icon: "git" },
+        { label: "Photoshop", icon: "photoshop" },
     ];
     const images = [
-        { src: light_mode_view_2, alt: "Project Three screenshot", width: 200, height: 400 },
+        { src: tafe_ss_1, alt: "Project Three screenshot" },
     ];
     return (
         <ProjectCard
-            title="Project Three"
-            description="Brief description of the third project. Replace with your content."
+            title="Interactive Learning Resource (TAFE Queensland)"
+            description="Developed engaging multimedia content for online and blended learning courses, with accessibility as a core focus."
             tags={tags}
             images={images}
-            liveUrl="#"
+            liveUrl="https://tafeqld.edu.au/courses/ways-to-study/tafe-at-school"
             caseStudyUrl="/projects/three"
         />
     );
 }
 
-function ProjectFour() {
+function ProjectALDI() {
     const tags = [
-        { label: "Figma", icon: "figma" },
-        { label: "Miro", icon: "miro" },
+        { label: "Docker", icon: "docker" },
         { label: "Kubernetes", icon: "kubernetes" },
+        { label: "Elastic", icon: "elastic" },
+        { label: "HTML", icon: "html" },
+        { label: "CSS", icon: "css" },
+        { label: "JavaScript", icon: "javascript" },
+        { label: "PHP", icon: "php" },
+        { label: "GitLab CI/CD", icon: "git" },
+        { label: "Git", icon: "git" }
     ];
     const images = [
-        { src: light_mode_view_2, alt: "Project Four screenshot", width: 200, height: 400 },
+        { src: aldi_ss_1, alt: "Project Four screenshot" },
     ];
     return (
         <ProjectCard
-            title="Project Four"
-            description="Brief description of the fourth project. Replace with your content."
+            title="Seamless Provisioning for ALDI Mobile (Symbio Networks)"
+            description="Implemented custom monitoring and QA processes to ensure smooth deployments for ALDI Mobile provisioning systems."
             tags={tags}
             images={images}
-            liveUrl="#"
+            liveUrl="https://www.aldimobile.com.au/"
             caseStudyUrl="/projects/four"
         />
     );
@@ -131,8 +145,8 @@ export default function Projects() {
             <h2>Featured Projects</h2>
             <ProjectScrabbleHelper />
             <ProjectPortfolio />
-            <ProjectThree />
-            <ProjectFour />
+            <ProjectTAFE />
+            <ProjectALDI />
         </section>
     );
 }

@@ -9,7 +9,7 @@ export default function Hero() {
             <p>Frontend-focused, full-stack capable. Turning ideas into helpful tools.</p>
             <div className="hero-buttons">
                 <a href="/#projects"><button>View Projects</button></a>
-                <a href="/Joey_Wong_CV.pdf" download><button>Download CV</button></a>
+                <a href="/Joey Wong CV 2025.pdf" download><button>Download CV</button></a>
             </div>
         </section>
     );
