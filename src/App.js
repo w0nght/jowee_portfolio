@@ -1,4 +1,4 @@
-import './App.css';
+import "./App.css";
 import { Routes, Route } from "react-router-dom";
 
 import Navbar from "./components/Navbar";
@@ -18,14 +18,17 @@ function App() {
       <Routes>
         <Route
           path="/"
-          element={(
+          element={
             <>
               <Hero />
               <Projects />
             </>
-          )}
+          }
         />
-        <Route path="/projects/scrabble-helper" element={<CaseStudyScrabbleHelper />} />
+        <Route
+          path="/projects/scrabble-helper"
+          element={<CaseStudyScrabbleHelper />}
+        />
         <Route path="/projects/portfolio" element={<CaseStudyPortfolio />} />
         <Route path="/projects/three" element={<CaseStudyThree />} />
         <Route path="/projects/four" element={<CaseStudyFour />} />

@@ -1,5 +1,5 @@
 :root {
-  --main-font: 'M PLUS Rounded 1c', sans-serif;
+  --main-font: "M PLUS Rounded 1c", sans-serif;
   /* Font weights */
   --font-thin: 100;
   --font-light: 300;
@@ -9,19 +9,19 @@
   --font-extra-bold: 800;
   --font-black: 900;
   /* Colors */
-  --bg-dark: #3E3E3E;
+  --bg-dark: #3e3e3e;
   --bg-card: #4b4a4a;
   --text-light: #e0e0e0;
   --text-muted: #bdbdbd;
   --text-dark: #000000;
   --accent-orange: #ff9800;
   --accent-orange-hover: #ffb84d;
-  --accent-cyan: #58AFD1;
+  --accent-cyan: #58afd1;
   --tag-bg: #2a2a2a;
   --btn-disabled-bg: #6a6a6a;
   --btn-disabled-text: #bbbbbb;
-  --bg-sand: #EDCEA2;
-  --bg-mist: #B0C4CC;
+  --bg-sand: #edcea2;
+  --bg-mist: #b0c4cc;
   --shadow-strong: rgba(0, 0, 0, 0.4);
   --shadow-soft: rgba(0, 0, 0, 0.3);
   --shadow-none: rgba(0, 0, 0, 0);
@@ -45,12 +45,10 @@ img {
   border-radius: 1rem;
 }
 
-
 a {
   text-decoration: none;
   color: inherit;
 }
-
 
 button {
   background: var(--accent-orange);
@@ -58,12 +56,11 @@ button {
   padding: 0.75rem 1.5rem;
   border-radius: 8px;
   color: var(--text-dark);
-  font-weight:  var(--font-medium);
+  font-weight: var(--font-medium);
   cursor: pointer;
   transition: background 0.3s ease, transform 0.15s ease;
   box-shadow: 2px 2px 0px var(--shadow-strong);
 }
-
 
 button:hover {
   background: var(--accent-orange-hover);
@@ -102,7 +99,6 @@ NAVBAR
   z-index: 1000;
 }
 
-
 .nav-logo {
   font-size: 1.25rem;
   font-weight: var(--font-bold);
@@ -128,34 +124,44 @@ NAVBAR
 }
 
 .nav-logo:hover .logo-stroke {
-  animation: draw-stroke 2.6s ease-in-out infinite, color-cycle 2.6s ease-in-out infinite;
+  animation: draw-stroke 2.6s ease-in-out infinite,
+    color-cycle 2.6s ease-in-out infinite;
 }
 
 @keyframes draw-stroke {
-  0% { stroke-dashoffset: 0; }
-  50% { stroke-dashoffset: 420; }
-  100% { stroke-dashoffset: 0; }
+  0% {
+    stroke-dashoffset: 0;
+  }
+  50% {
+    stroke-dashoffset: 420;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
 }
 
 @keyframes color-cycle {
-  0% { stroke: var(--accent-orange); }
-  50% { stroke: var(--accent-cyan); }
-  100% { stroke: var(--accent-orange); }
+  0% {
+    stroke: var(--accent-orange);
+  }
+  50% {
+    stroke: var(--accent-cyan);
+  }
+  100% {
+    stroke: var(--accent-orange);
+  }
 }
-
 
 .nav-links {
   display: flex;
   gap: 1.5rem;
 }
 
-
 .nav-links a {
   color: var(--text-light);
   font-weight: var(--font-medium);
   position: relative;
 }
-
 
 .nav-links a::after {
   content: "";
@@ -168,11 +174,9 @@ NAVBAR
   transition: width 0.3s ease;
 }
 
-
 .nav-links a:hover::after {
   width: 100%;
 }
-
 
 .hamburger {
   display: none;
@@ -191,12 +195,10 @@ HERO SECTION
   text-align: center;
 }
 
-
 .hero h1 {
   font-size: 2.5rem;
   margin-bottom: 0.5rem;
 }
-
 
 .hero h2 {
   font-size: 1.5rem;
@@ -204,11 +206,9 @@ HERO SECTION
   margin-bottom: 1rem;
 }
 
-
 .highlight {
   color: var(--accent-orange);
 }
-
 
 .hero-buttons {
   display: flex;
@@ -249,7 +249,7 @@ CASE STUDY PAGES
 CODE FEEL STYLING
 ============================= */
 .inline-code {
-  font-family: 'Fira Code', 'Source Code Pro', monospace;
+  font-family: "Fira Code", "Source Code Pro", monospace;
   background: #1e1e1e;
   color: #ffb84d;
   padding: 0.15rem 0.4rem;
@@ -316,8 +316,12 @@ SCREENSHOT GRID
   box-shadow: 0 2px 6px var(--shadow-soft);
 }
 
-.screenshot-card.sand { background: var(--bg-sand); }
-.screenshot-card.mist { background: var(--bg-mist); }
+.screenshot-card.sand {
+  background: var(--bg-sand);
+}
+.screenshot-card.mist {
+  background: var(--bg-mist);
+}
 
 .screenshot-card img {
   width: 100%;
@@ -333,13 +337,16 @@ SCREENSHOT GRID
 }
 
 @media (max-width: 1024px) {
-  .screenshot-grid { grid-template-columns: repeat(2, 1fr); }
+  .screenshot-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 @media (max-width: 640px) {
-  .screenshot-grid { grid-template-columns: 1fr; }
+  .screenshot-grid {
+    grid-template-columns: 1fr;
+  }
 }
-
 
 .project-card {
   background: var(--bg-card);
@@ -352,12 +359,10 @@ SCREENSHOT GRID
   gap: 2rem;
 }
 
-
 .project-card h3 {
   margin: 0.5rem 0;
   color: var(--accent-orange);
 }
-
 
 .tags {
   display: flex;
@@ -375,7 +380,6 @@ SCREENSHOT GRID
   font-size: 0.85rem;
   color: var(--accent-orange);
 }
-
 
 .project-card .buttons {
   margin-top: 1rem;
@@ -398,7 +402,6 @@ SCREENSHOT GRID
   height: auto;
   max-width: 380px;
 }
-
 
 /* =============================
 RESPONSIVENESS
@@ -423,16 +426,13 @@ RESPONSIVENESS
     border-radius: 0 0 0 10px;
   }
 
-
   .nav-links.open {
     display: flex;
   }
 
-
   .hamburger {
     display: block;
   }
-
 
   .hero-buttons {
     flex-direction: column;
