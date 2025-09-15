@@ -1,8 +1,8 @@
 import Tag from "./Tag";
-import dark_mode_view_1 from "../assets/images/case-studies/scrabble-helper/dark_mode_view_1.png";
-import my_ss_1 from "../assets/images/case-studies/jowee-portfolio/my_ss_1.png";
-import tafe_ss_1 from "../assets/images/case-studies/tafeqld/ss_1.png";
-import aldi_ss_1 from "../assets/images/case-studies/symbio/ss_1.png";
+// import dark_mode_view_1 from "../assets/images/scrabble-helper/dark_mode_view_1.png";
+// import my_ss_1 from "../assets/images/jowee-portfolio/my_ss_1.png";
+// import tafe_ss_1 from "../assets/images/tafeqld/ss_1.png";
+// import aldi_ss_1 from "../assets/images/symbio/ss_1.png";
 
 function ProjectCard({ title, description, tags, images, liveUrl, caseStudyUrl }) {
     return (
@@ -48,7 +48,7 @@ function ProjectScrabbleHelper() {
         { label: "Git", icon: "git" }
     ];
     const images = [
-        { src: dark_mode_view_1, alt: "Scrabble Helper screenshot Dark Mode" },
+        { src: "../assets/images/scrabble-helper/dark_mode_view_1.png", alt: "Scrabble Helper screenshot Dark Mode" },
         // { src: light_mode_view_2, alt: "Scrabble Helper screenshot Light Mode", width: 200, height: 400 },
     ];
     return (
@@ -74,7 +74,7 @@ function ProjectPortfolio() {
 
     ];
     const images = [
-        { src: my_ss_1, alt: "Responsive Portfolio screenshot" },
+        { src: "../assets/images/jowee-portfolio/my_ss_1.png", alt: "Responsive Portfolio screenshot" },
     ];
     return (
         <ProjectCard
@@ -98,7 +98,7 @@ function ProjectTAFE() {
         { label: "Photoshop", icon: "photoshop" },
     ];
     const images = [
-        { src: tafe_ss_1, alt: "Project Three screenshot" },
+        { src: "../assets/images/tafeqld/ss_1.png", alt: "Project Three screenshot" },
     ];
     return (
         <ProjectCard
@@ -125,7 +125,7 @@ function ProjectALDI() {
         { label: "Git", icon: "git" }
     ];
     const images = [
-        { src: aldi_ss_1, alt: "Project Four screenshot" },
+        { src: "../assets/images/symbio/ss_1.png", alt: "Project Four screenshot" },
     ];
     return (
         <ProjectCard
