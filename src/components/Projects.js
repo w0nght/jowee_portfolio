@@ -1,8 +1,4 @@
 import Tag from "./Tag";
-// import dark_mode_view_1 from "../assets/images/scrabble-helper/dark_mode_view_1.png";
-// import my_ss_1 from "../assets/images/jowee-portfolio/my_ss_1.png";
-// import tafe_ss_1 from "../assets/images/tafeqld/ss_1.png";
-// import aldi_ss_1 from "../assets/images/symbio/ss_1.png";
 
 function ProjectCard({
   title,
@@ -67,7 +63,7 @@ function ProjectScrabbleHelper() {
       src: "../assets/images/scrabble-helper/dark_mode_view_1.png",
       alt: "Scrabble Helper screenshot Dark Mode",
     },
-    // { src: light_mode_view_2, alt: "Scrabble Helper screenshot Light Mode", width: 200, height: 400 },
+
   ];
   return (
     <ProjectCard
