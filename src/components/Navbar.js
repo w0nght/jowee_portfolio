@@ -21,7 +21,7 @@ export default function Navbar() {
         </svg>
       </a>
       <div className={`nav-links ${isOpen ? "open" : ""}`}>
-        <a href="/#home">Home</a>
+        {/* <a href="/#home">Home</a> */}
         {/* <a href="/#about">About Me</a> */}
         <a href="/#projects">Projects</a>
         <a href="/#experience">Experience</a>
