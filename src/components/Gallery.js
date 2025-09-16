@@ -3,12 +3,12 @@ import "./Gallery.css";
 
 const CustomGallery = ({ images }) => {
   const videoRefs = useRef([]);
+  const [playingIndex, setPlayingIndex] = useState(null);
 
   const handleMouseEnter = (index) => {
     const video = videoRefs.current[index];
-    if (video && video.dataset.autoplay === "true") {
+    if (video && video.dataset.autoplay === "true" && playingIndex === null) {
       video.play().catch(() => {
-        // Autoplay might be blocked by browser
         console.log("Autoplay blocked");
       });
     }
@@ -16,9 +16,33 @@ const CustomGallery = ({ images }) => {
 
   const handleMouseLeave = (index) => {
     const video = videoRefs.current[index];
-    if (video && video.dataset.autoplay === "true") {
+    if (video && video.dataset.autoplay === "true" && playingIndex === null) {
       video.pause();
       video.currentTime = 0;
+    }
+  };
+
+  const handleVideoClick = (index) => {
+    const video = videoRefs.current[index];
+    if (!video) return;
+
+    if (video.paused) {
+      // Play the video
+      video
+        .play()
+        .then(() => setPlayingIndex(index))
+        .catch(() => console.log("Play failed"));
+    } else {
+      // Pause the video
+      video.pause();
+      setPlayingIndex(null);
+    }
+  };
+
+  const handleVideoEnd = (index) => {
+    // Reset playing state when video ends
+    if (playingIndex === index) {
+      setPlayingIndex(null);
     }
   };
 
@@ -46,24 +70,50 @@ const CustomGallery = ({ images }) => {
               "--aspect-ratio": aspectRatio,
             }}
             data-type={media.type}
+            onMouseEnter={() => handleMouseEnter(index)}
+            onMouseLeave={() => handleMouseLeave(index)}
           >
             {media.type === "video" ? (
-              <video
-                ref={(el) => (videoRefs.current[index] = el)}
-                className="gallery-media"
-                width={width}
-                height={height}
-                muted
-                loop
-                playsInline
-                preload="metadata"
-                style={{
-                  aspectRatio: `${width}/${height}`,
-                  backgroundColor: "#1a365d", // Dark blue fallback
-                }}
+              <div
+                className="video-container"
+                onClick={() => handleVideoClick(index)}
               >
-                <source src={media.src} type="video/mp4" />
-              </video>
+                <video
+                  ref={(el) => (videoRefs.current[index] = el)}
+                  className="gallery-media"
+                  width={width}
+                  height={height}
+                  muted
+                  loop
+                  playsInline
+                  preload="metadata"
+                  data-autoplay={media.autoplayOnHover}
+                  onEnded={() => handleVideoEnd(index)}
+                  style={{
+                    aspectRatio: `${width}/${height}`,
+                    backgroundColor: "#1a365d", // Dark blue fallback
+                  }}
+                >
+                  <source src={media.src} type="video/mp4" />
+                  Your browser does not support the video tag.
+                </video>
+
+                {/* Play/Pause overlay button */}
+                <div
+                  className={`video-controls ${
+                    playingIndex === index ? "playing" : ""
+                  }`}
+                >
+                  <button
+                    className="play-pause-btn"
+                    aria-label={
+                      playingIndex === index ? "Pause video" : "Play video"
+                    }
+                  >
+                    {playingIndex === index ? "❚❚" : "▶"}
+                  </button>
+                </div>
+              </div>
             ) : (
               <img
                 src={media.src}
@@ -78,7 +128,7 @@ const CustomGallery = ({ images }) => {
                 }}
                 onError={(e) => {
                   // Fallback if image fails to load
-                  e.target.style.backgroundColor = "#e2e8f0";
+                  e.target.style.backgroundColor = "#1a365d";
                 }}
               />
             )}
@@ -86,7 +136,9 @@ const CustomGallery = ({ images }) => {
             <div className="media-overlay">
               {/* Video indicator badge */}
               {media.type === "video" && (
-                <div className="video-badge">▶️ Video</div>
+                <div className="video-badge">
+                  {playingIndex === index ? "⏸️ Playing" : "▶️ Video"}
+                </div>
               )}
 
               {media.caption && (
