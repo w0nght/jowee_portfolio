@@ -1,19 +1,7 @@
 // import { CustomGallery } from "../components/ImageGallery";
 import CustomGallery from "../components/Gallery";
 import { scrabbleHelperImages } from "../data/caseStudyImages";
-
 import Tag from "../components/Tag";
-import VideoPlayer from "../components/VideoPlayer";
-import demoVideo from "../assets/scrabblehelper_demo_vid_720.mp4";
-// import ScreenshotGrid from "../components/ScreenshotGrid";
-// Best practice: organize per case study under src/assets/images/case-studies/<slug>
-// Scrabble Helper assets
-// import inputUiPng from "../assets/images/case-studies/scrabble-helper/dark_mode_view_1.png";
-// import ssResultsPng from "../assets/images/case-studies/scrabble-helper/sh_wild_result_1.png";
-// import ssResultsPngDark from "../assets/images/case-studies/scrabble-helper/sh_wild_result_2.png";
-// import ssWordFilter from "../assets/images/scrabble-helper/sh_word_filter_1.png";
-// import ssWordSort from "../assets/images/scrabble-helper/sh_result_sorting_1.png";
-// import ssDictSort from "../assets/images/scrabble-helper/sh_dict_sort_1.png";
 
 export default function CaseStudyScrabbleHelper() {
   return (
@@ -116,32 +104,17 @@ export default function CaseStudyScrabbleHelper() {
         </a>
       </div>
       <h2>📸 Screenshots/Demo</h2>
-      <div className="demo-row">
+      {/* <div className="demo-row">
         <VideoPlayer
           src={demoVideo}
           bg="mist"
           objectFit="cover"
           height="640px"
           caption="Demo video"
-        />
-
-        {/* <figure className="screenshot-card sand">
-                    <img src={inputUiPng} alt="Light mode" style={{ height: "640px", width: "100%", objectFit: "cover" }} />
-                    <figcaption>Dark mode</figcaption>
-                </figure> */}
-      </div>
+        /> 
+     </div> */}
 
       <CustomGallery images={scrabbleHelperImages} />
-
-      {/* <ScreenshotGrid
-                items={[
-                    { src: ssResultsPng, alt: "Wildcard results", caption: "Wildcard results in Light mode.", bg: "sand" },
-                    { src: ssResultsPngDark, alt: "Wildcard results", caption: "Wildcard results in Dark mode", bg: "sand" },
-                    { src: ssWordFilter, alt: "Word length and required letters filtering", caption: "Word length and required letters filtering", bg: "mist" },
-                    { src: ssWordSort, alt: "Word length and required letters filtering", caption: "Sort results (Score, Length, Alphabetical)", bg: "mist" },
-                    { src: ssDictSort, alt: "Dictionary selection", caption: "Dictionary selection with caching for fast switching (Collins 2019, OTCWL 2016, SOWPODS)", bg: "sand" },
-                ]}
-            /> */}
     </section>
   );
 }
