@@ -24,7 +24,7 @@ export default function Navbar() {
         <a href="/#home">Home</a>
         {/* <a href="/#about">About Me</a> */}
         <a href="/#projects">Projects</a>
-        {/* <a href="/#experience">Experience</a> */}
+        <a href="/#experience">Experience</a>
         {/* <a href="/#contact">Contact</a> */}
         <a href="/Joey Wong CV 2025.pdf" className="btn" download>
           Download CV
