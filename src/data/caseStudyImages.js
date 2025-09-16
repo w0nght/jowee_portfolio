@@ -3,68 +3,76 @@ import { IMAGE_PATHS, createMedia } from "./imagePaths";
 const { SCRABBLE, PORTFOLIO } = IMAGE_PATHS;
 // SYMBIO, TAFEQLD
 export const scrabbleHelperImages = [
+  createMedia(SCRABBLE, "dark_mode_view_1.png", 800, 700, "Dark mode", []),
   createMedia(
     SCRABBLE,
-    "dark_mode_view_1.png",
-    800,
-    700,
-    "Scrabble Helper - Wildcard Results",
-    ["JavaScript", "Node.js"]
-  ),
-  createMedia(
-    SCRABBLE,
-    "dark_mode_view_1.png",
+    "light_mode_view_1.png",
     800,
     600,
-    "Scrabble Helper - Wildcard Results",
-    ["JavaScript", "Node.js"],
+    "Light mode",
+    [],
     "image" // Specify type
   ),
   createMedia(
     SCRABBLE,
     "scrabblehelper_demo_vid_720.mp4",
     800,
-    750,
-    "Scrabble Helper App Demo",
-    ["React Native", "Mobile Development"],
+    600,
+    "Scrabble Helper App Demo ",
+    [],
     "video", // Specify type
-    true // Optional: autoplay on hover
+    false // Optional: autoplay on hover, false is better
   ),
   createMedia(
     SCRABBLE,
-    "scrabblehelper_demo_vid_720.mp4",
+    "sh_result_sorting_1.png",
     800,
-    750,
-    "Scrabble Helper App Demo",
-    ["React Native", "Mobile Development"],
-    "video", // Specify type
-    false // Optional: autoplay on hover
+    300,
+    "Wildcard Results",
+    []
   ),
-
   createMedia(
     SCRABBLE,
-    "dark_mode_view_1.png",
+    "light_mode_view_2.png",
     800,
-    700,
-    "Scrabble Helper - Wildcard Results",
-    ["JavaScript", "Node.js"]
+    600,
+    "Search result",
+    [],
+    "image" // Specify type
+  ),
+  createMedia(
+    SCRABBLE,
+    "sh_dict_sort_1.png",
+    800,
+    300,
+    "Dictionary options",
+    []
   ),
   createMedia(
     SCRABBLE,
     "sh_wild_result_1.png",
-    800,
-    200,
-    "Scrabble Helper - Wildcard Results",
-    ["JavaScript", "Node.js"]
+    900,
+    400,
+    "Wildcard Results",
+    []
   ),
   createMedia(
     SCRABBLE,
     "sh_wild_result_2.png",
     800,
-    200,
-    "Scrabble Helper - Advanced Filtering",
-    ["Algorithm", "Optimization"]
+    300,
+    "Wildcard Results",
+    []
   ),
+  createMedia(
+    SCRABBLE,
+    "sh_word_filter_1.png",
+    800,
+    260,
+    "Advanced Filtering",
+    []
+  ),
+  createMedia(SCRABBLE, "dark_mode_view_2.png", 800, 700, "Search results", []),
   // Add more images...
 ];
 
