@@ -9,6 +9,7 @@ import CaseStudyScrabbleHelper from "./pages/CaseStudyScrabbleHelper";
 import CaseStudyPortfolio from "./pages/CaseStudyPortfolio";
 import CaseStudyThree from "./pages/CaseStudyThree";
 import CaseStudyFour from "./pages/CaseStudyFour";
+import ExperienceSection from "./components/ExperienceSection";
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
             <>
               <Hero />
               <Projects />
+              <ExperienceSection />
             </>
           }
         />
