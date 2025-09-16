@@ -28,7 +28,7 @@ export const scrabbleHelperImages = [
     "sh_result_sorting_1.png",
     800,
     300,
-    "Wildcard Results",
+    "Sort results (Score, Length, Alphabetical)",
     []
   ),
   createMedia(
@@ -45,7 +45,7 @@ export const scrabbleHelperImages = [
     "sh_dict_sort_1.png",
     800,
     300,
-    "Dictionary options",
+    "Dictionary selection with caching for fast switching (Collins 2019, OTCWL 2016, SOWPODS)",
     []
   ),
   createMedia(
@@ -69,7 +69,7 @@ export const scrabbleHelperImages = [
     "sh_word_filter_1.png",
     800,
     260,
-    "Advanced Filtering",
+    "Word length and required letters filtering",
     []
   ),
   createMedia(SCRABBLE, "dark_mode_view_2.png", 800, 700, "Search results", []),
