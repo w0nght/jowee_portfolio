@@ -1,8 +1,26 @@
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 import { FaBars } from "react-icons/fa";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
+  const menuRef = useRef();
+
+  useEffect(() => {
+    function handleClickOutside(event) {
+      if (menuRef.current && !menuRef.current.contains(event.target)) {
+        setIsOpen(false);
+      }
+    }
+
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [menuRef]);
+
+  const handleMenuClick = () => {
+    setIsOpen(false);
+  };
 
   return (
     <nav className="navbar">
@@ -20,13 +38,22 @@ export default function Navbar() {
           </text>
         </svg>
       </a>
-      <div className={`nav-links ${isOpen ? "open" : ""}`}>
+      <div className={`nav-links ${isOpen ? "open" : ""}`} ref={menuRef}>
         {/* <a href="/#home">Home</a> */}
         {/* <a href="/#about">About Me</a> */}
-        <a href="/#projects">Projects</a>
-        <a href="/#experience">Experience</a>
+        <a href="/#projects" onClick={handleMenuClick}>
+          Projects
+        </a>
+        <a href="/#experience" onClick={handleMenuClick}>
+          Experience
+        </a>
         {/* <a href="/#contact">Contact</a> */}
-        <a href="/Joey Wong CV 2025.pdf" className="btn" download>
+        <a
+          href="/Joey Wong CV 2025.pdf"
+          className="btn"
+          download
+          onClick={handleMenuClick}
+        >
           Download CV
         </a>
       </div>
