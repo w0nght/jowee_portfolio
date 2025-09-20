@@ -1,9 +1,26 @@
 import { useState, useRef, useEffect } from "react";
-import { FaBars } from "react-icons/fa";
+import { FaBars, FaTimes } from "react-icons/fa";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
+  const [isSmallScreen, setIsSmallScreen] = useState(false);
   const menuRef = useRef();
+
+  useEffect(() => {
+    function handleResize() {
+      setIsSmallScreen(window.innerWidth <= 768);
+    }
+
+    handleResize(); // Set initial value
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  useEffect(() => {
+    if (!isSmallScreen) {
+      setIsOpen(false); // Close menu when screen size changes to large
+    }
+  }, [isSmallScreen]);
 
   useEffect(() => {
     function handleClickOutside(event) {
@@ -19,7 +36,7 @@ export default function Navbar() {
   }, [menuRef]);
 
   const handleMenuClick = () => {
-    setIsOpen(false);
+    setIsOpen(!isOpen);
   };
 
   return (
@@ -56,8 +73,22 @@ export default function Navbar() {
         >
           Download CV
         </a>
+        {isSmallScreen && (
+          <button className="nav-btn nav-close-btn" onClick={handleMenuClick}>
+            <FaTimes />
+          </button>
+        )}
       </div>
-      <FaBars className="hamburger" onClick={() => setIsOpen(!isOpen)} />
+      {isSmallScreen &&
+        (isOpen ? (
+          <button className="nav-btn" onClick={handleMenuClick}>
+            <FaTimes />
+          </button>
+        ) : (
+          <button className="nav-btn" onClick={handleMenuClick}>
+            <FaBars />
+          </button>
+        ))}
     </nav>
   );
 }
