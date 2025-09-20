@@ -130,8 +130,9 @@ function ExperienceFanTipper() {
   const tags = [
     { label: "React Native", icon: "react-native" },
     { label: "React", icon: "react" },
+    { label: "HTML", icon: "html" },
+    { label: "CSS", icon: "css" },
     { label: "JavaScript", icon: "javascript" },
-    { label: "UI/UX", icon: "palette" },
   ];
   return (
     <ExperienceCard
