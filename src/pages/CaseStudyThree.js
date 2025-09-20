@@ -11,7 +11,9 @@ export default function CaseStudyThree() {
           { label: "JavaScript", icon: "javascript" },
           { label: "Bootstrap", icon: "bootstrap" },
           { label: "Git", icon: "git" },
-          { label: "Photoshop", icon: "photoshop" },
+          { label: "Photoshop", icon: "photoshop" },  
+          { label: "Deployment", icon: "deployment" },
+          { label: "Accessibility", icon: "accessibility" },
         ].map((t) => (
           <Tag key={t.label} label={t.label} icon={t.icon} />
         ))}

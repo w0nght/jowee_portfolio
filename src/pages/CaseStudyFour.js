@@ -11,12 +11,15 @@ export default function CaseStudyFour() {
           { label: "Docker", icon: "docker" },
           { label: "Kubernetes", icon: "kubernetes" },
           { label: "Elastic", icon: "elastic" },
+          { label: "AWS", icon: "aws" },
           { label: "HTML", icon: "html" },
           { label: "CSS", icon: "css" },
           { label: "JavaScript", icon: "javascript" },
           { label: "PHP", icon: "php" },
-          { label: "GitLab CI/CD", icon: "git" },
           { label: "Git", icon: "git" },
+          { label: "GitLab CI/CD", icon: "git" },
+          { label: "Deployment", icon: "deployment" },
+          { label: "Agile Methodologies", icon: "agile" },
         ].map((t) => (
           <Tag key={t.label} label={t.label} icon={t.icon} />
         ))}

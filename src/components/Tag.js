@@ -11,9 +11,11 @@ import {
   faDocker,
   faBootstrap,
   faFigma,
+  faAws,
 } from "@fortawesome/free-brands-svg-icons";
 import {
   faCode,
+  faFolderOpen,
   faWandMagicSparkles,
   faDatabase,
   faPalette,
@@ -21,6 +23,7 @@ import {
   faMagnifyingGlass,
   faUniversalAccess,
   faArrowsRotate,
+  faPlaneCircleCheck,
 } from "@fortawesome/free-solid-svg-icons";
 
 const iconMap = {
@@ -34,7 +37,8 @@ const iconMap = {
   "vanilla-js": faWandMagicSparkles,
   php: faPhp,
   docker: faDocker,
-  jquery: faJs, // fallback: no official jQuery icon in FA Free
+  aws: faAws,
+  jquery: faFolderOpen, // fallback: no official jQuery icon in FA Free
   "react-native": faReact, // reuse React icon
   bootstrap: faBootstrap,
   mysql: faDatabase, // fallback: use database icon
@@ -45,6 +49,7 @@ const iconMap = {
   elastic: faMagnifyingGlass, // fallback: elastic brand not in FA Free
   accessibility: faUniversalAccess,
   agile: faArrowsRotate,
+  deployment: faPlaneCircleCheck,
 };
 
 export default function Tag({ label, icon }) {

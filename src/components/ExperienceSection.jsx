@@ -34,8 +34,11 @@ function ExperienceTAFE() {
     { label: "HTML", icon: "html" },
     { label: "CSS", icon: "css" },
     { label: "JavaScript", icon: "javascript" },
-    { label: "Accessibility", icon: "accessibility" },
+    { label: "Bootstrap", icon: "bootstrap" },
+    { label: "Git", icon: "git" },
     { label: "Photoshop", icon: "photoshop" },
+    { label: "Deployment", icon: "deployment" },
+    { label: "Accessibility", icon: "accessibility" },
   ];
   return (
     <ExperienceCard
@@ -62,8 +65,9 @@ function ExperienceEdX() {
   const tags = [
     { label: "Figma", icon: "figma" },
     { label: "Miro", icon: "miro" },
-    { label: "GitHub", icon: "git" },
+    { label: "Git", icon: "git" },
     { label: "JavaScript", icon: "javascript" },
+    { label: "jQuery", icon: "jquery" },
   ];
   return (
     <ExperienceCard
@@ -86,12 +90,18 @@ function ExperienceEdX() {
 // 📡 Symbio Networks
 function ExperienceSymbio() {
   const tags = [
-    { label: "PHP", icon: "php" },
-    { label: "SQL", icon: "mysql" },
     { label: "Docker", icon: "docker" },
+    { label: "Kubernetes", icon: "kubernetes" },
     { label: "Elastic", icon: "elastic" },
-    { label: "CI/CD", icon: "git" },
-    { label: "QA", icon: "code" },
+    { label: "AWS", icon: "aws" },
+    { label: "HTML", icon: "html" },
+    { label: "CSS", icon: "css" },
+    { label: "JavaScript", icon: "javascript" },
+    { label: "PHP", icon: "php" },
+    { label: "Git", icon: "git" },
+    { label: "GitLab CI/CD", icon: "git" },
+    { label: "Deployment", icon: "deployment" },
+    { label: "Agile Methodologies", icon: "agile" },
   ];
   return (
     <ExperienceCard
