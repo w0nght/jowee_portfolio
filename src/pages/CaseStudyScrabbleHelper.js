@@ -1,4 +1,3 @@
-// import { CustomGallery } from "../components/ImageGallery";
 import CustomGallery from "../components/Gallery";
 import { scrabbleHelperImages } from "../data/caseStudyImages";
 import Tag from "../components/Tag";
@@ -11,8 +10,7 @@ export default function CaseStudyScrabbleHelper() {
         {[
           { label: "HTML", icon: "html" },
           { label: "CSS", icon: "css" },
-          { label: "JavaScript", icon: "javascript" },
-          { label: "Vanilla JS", icon: "vanilla-js" },
+          { label: "JavaScript (Vanilla & ES6+)", icon: "javascript" },
           { label: "Git", icon: "git" },
         ].map((t) => (
           <Tag key={t.label} label={t.label} icon={t.icon} />
@@ -104,16 +102,6 @@ export default function CaseStudyScrabbleHelper() {
         </a>
       </div>
       <h2>📸 Screenshots/Demo</h2>
-      {/* <div className="demo-row">
-        <VideoPlayer
-          src={demoVideo}
-          bg="mist"
-          objectFit="cover"
-          height="640px"
-          caption="Demo video"
-        /> 
-     </div> */}
-
       <CustomGallery images={scrabbleHelperImages} />
     </section>
   );

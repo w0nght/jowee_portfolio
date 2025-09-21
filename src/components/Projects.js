@@ -54,8 +54,7 @@ function ProjectScrabbleHelper() {
   const tags = [
     { label: "HTML", icon: "html" },
     { label: "CSS", icon: "css" },
-    { label: "JavaScript", icon: "javascript" },
-    { label: "Vanilla JS", icon: "vanilla-js" },
+    { label: "JavaScript (Vanilla & ES6+)", icon: "javascript" },
     { label: "Git", icon: "git" },
   ];
   const images = [
@@ -79,11 +78,11 @@ function ProjectScrabbleHelper() {
 
 function ProjectPortfolio() {
   const tags = [
-    { label: "React", icon: "react" },
-    { label: "Node.js", icon: "node" },
     { label: "HTML", icon: "html" },
     { label: "CSS", icon: "css" },
     { label: "JavaScript", icon: "javascript" },
+    { label: "React", icon: "react" },
+    { label: "Node.js", icon: "node" },
     { label: "Git", icon: "git" },
   ];
   const images = [
@@ -111,6 +110,8 @@ function ProjectTAFE() {
     { label: "JavaScript", icon: "javascript" },
     { label: "Bootstrap", icon: "bootstrap" },
     { label: "Git", icon: "git" },
+    { label: "Deployment", icon: "deployment" },
+    { label: "Accessibility", icon: "accessibility" },
     { label: "Photoshop", icon: "photoshop" },
   ];
   const images = [
@@ -133,15 +134,18 @@ function ProjectTAFE() {
 
 function ProjectALDI() {
   const tags = [
-    { label: "Docker", icon: "docker" },
-    { label: "Kubernetes", icon: "kubernetes" },
-    { label: "Elastic", icon: "elastic" },
     { label: "HTML", icon: "html" },
     { label: "CSS", icon: "css" },
     { label: "JavaScript", icon: "javascript" },
     { label: "PHP", icon: "php" },
-    { label: "GitLab CI/CD", icon: "git" },
+    { label: "AWS (cloud platform)", icon: "aws" },
+    { label: "Docker (containerization)", icon: "docker" },
+    { label: "Kubernetes (orchestration)", icon: "kubernetes" },
+    { label: "GitLab CI/CD (automation & pipelines)", icon: "git" },
+    { label: "Elastic (logging, search, monitoring)", icon: "elastic" },
     { label: "Git", icon: "git" },
+    { label: "Deployment", icon: "deployment" },
+    { label: "Agile Methodologies", icon: "agile" },
   ];
   const images = [
     { src: "../assets/images/symbio/ss_1.png", alt: "Project Four screenshot" },

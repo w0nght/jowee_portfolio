@@ -20,6 +20,7 @@ import {
   faDatabase,
   faPalette,
   faCubes,
+  faGear,
   faMagnifyingGlass,
   faUniversalAccess,
   faArrowsRotate,
@@ -27,29 +28,38 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 
 const iconMap = {
-  javascript: faJs,
-  css: faCss3Alt,
+  // core languages & web fundamentals
   html: faHtml5,
-  react: faReact,
-  node: faNodeJs,
-  git: faGitAlt,
-  code: faCode,
-  "vanilla-js": faWandMagicSparkles,
+  css: faCss3Alt,
+  javascript: faJs,
   php: faPhp,
-  docker: faDocker,
-  aws: faAws,
-  jquery: faFolderOpen, // fallback: no official jQuery icon in FA Free
-  "react-native": faReact, // reuse React icon
+
+  // frameworks & libraries
+  react: faReact,
+  jquery: faFolderOpen, // fallback: no official jQuery icon in FA Free  
   bootstrap: faBootstrap,
+
+  // backend & devops
+  node: faNodeJs,
+  docker: faDocker,
+  kubernetes: faCubes, // fallback: cubes icon
+  elastic: faMagnifyingGlass, // fallback: elastic brand not in FA Free
+  aws: faAws,
+
+  // databases
   mysql: faDatabase, // fallback: use database icon
+
+  // collaboration & workflow
+  git: faGitAlt,
+  agile: faArrowsRotate,
+  deployment: faPlaneCircleCheck,
+  accessibility: faUniversalAccess,
+  troubleshooting: faGear,
+
+  // design & prototyping tools
   figma: faFigma,
   miro: faCode, // fallback: generic code icon
   photoshop: faPalette, // fallback: palette icon
-  kubernetes: faCubes, // fallback: cubes icon
-  elastic: faMagnifyingGlass, // fallback: elastic brand not in FA Free
-  accessibility: faUniversalAccess,
-  agile: faArrowsRotate,
-  deployment: faPlaneCircleCheck,
 };
 
 export default function Tag({ label, icon }) {

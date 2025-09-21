@@ -6,11 +6,11 @@ export default function CaseStudyPortfolio() {
       <h1>Responsive Portfolio Case Study</h1>
       <div className="tags">
         {[
-          { label: "React", icon: "react" },
-          { label: "Node.js", icon: "node" },
           { label: "HTML", icon: "html" },
           { label: "CSS", icon: "css" },
           { label: "JavaScript", icon: "javascript" },
+          { label: "React", icon: "react" },
+          { label: "Node.js", icon: "node" },
           { label: "Git", icon: "git" },
         ].map((t) => (
           <Tag key={t.label} label={t.label} icon={t.icon} />

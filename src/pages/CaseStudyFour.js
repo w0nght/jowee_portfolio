@@ -8,16 +8,16 @@ export default function CaseStudyFour() {
       </h1>
       <div className="tags">
         {[
-          { label: "Docker", icon: "docker" },
-          { label: "Kubernetes", icon: "kubernetes" },
-          { label: "Elastic", icon: "elastic" },
-          { label: "AWS", icon: "aws" },
           { label: "HTML", icon: "html" },
           { label: "CSS", icon: "css" },
           { label: "JavaScript", icon: "javascript" },
           { label: "PHP", icon: "php" },
+          { label: "AWS (cloud platform)", icon: "aws" },
+          { label: "Docker (containerization)", icon: "docker" },
+          { label: "Kubernetes (orchestration)", icon: "kubernetes" },
+          { label: "GitLab CI/CD (automation & pipelines)", icon: "git" },
+          { label: "Elastic (logging, search, monitoring)", icon: "elastic" },
           { label: "Git", icon: "git" },
-          { label: "GitLab CI/CD", icon: "git" },
           { label: "Deployment", icon: "deployment" },
           { label: "Agile Methodologies", icon: "agile" },
         ].map((t) => (
