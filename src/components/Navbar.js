@@ -57,7 +57,9 @@ export default function Navbar() {
       </a>
       <div className={`nav-links ${isOpen ? "open" : ""}`} ref={menuRef}>
         {/* <a href="/#home">Home</a> */}
-        {/* <a href="/#about">About Me</a> */}
+        <a href="/about" onClick={handleMenuClick}>
+          About Me
+        </a>
         <a href="/#projects" onClick={handleMenuClick}>
           Projects
         </a>

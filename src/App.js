@@ -10,6 +10,7 @@ import CaseStudyPortfolio from "./pages/CaseStudyPortfolio";
 import CaseStudyThree from "./pages/CaseStudyThree";
 import CaseStudyFour from "./pages/CaseStudyFour";
 import ExperienceSection from "./components/ExperienceSection";
+import About from "./pages/About";
 
 function App() {
   return (
@@ -34,6 +35,7 @@ function App() {
         <Route path="/projects/portfolio" element={<CaseStudyPortfolio />} />
         <Route path="/projects/three" element={<CaseStudyThree />} />
         <Route path="/projects/four" element={<CaseStudyFour />} />
+        <Route path="/about" element={<About />} />
       </Routes>
       {/* More sections: Experience, Skills, Footer */}
     </>
