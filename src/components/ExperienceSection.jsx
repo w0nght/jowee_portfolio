@@ -137,7 +137,7 @@ function ExperienceFanTipper() {
     { label: "CSS", icon: "css" },
     { label: "JavaScript", icon: "javascript" },
     { label: "React", icon: "react" },
-    { label: "React Native", icon: "react-native" },
+    { label: "React Native", icon: "react" },
   ];
   return (
     <ExperienceCard
