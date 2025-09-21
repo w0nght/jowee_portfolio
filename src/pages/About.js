@@ -2,6 +2,12 @@ export default function About() {
     return (
         <section id="about" className="about">
             <h1>Hi again, this is Joey!</h1>
+            <img
+                src="/assets/images/profile_pic.jpg"
+                alt="Joey Wong - Profile Picture"
+                className="profile-picture"
+            />
+
             <h2>Thanks for dropping by my site!</h2>
             <p>
                 I'm a passionate full-stack developer with a love for creating beautiful,
