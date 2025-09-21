@@ -41,7 +41,7 @@ export default function Navbar() {
 
   return (
     <nav className="navbar">
-      <a href="/#home" className="nav-logo" aria-label="Home">
+      <a href="/" className="nav-logo" aria-label="Home">
         <svg
           className="logo-svg"
           viewBox="0 0 180 36"
