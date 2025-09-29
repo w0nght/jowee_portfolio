@@ -1,4 +1,7 @@
 import Tag from "./Tag";
+import { IMAGE_PATHS } from "../data/imagePaths";
+
+const { SCRABBLE, PORTFOLIO, SYMBIO, TAFEQLD } = IMAGE_PATHS;
 
 function ProjectCard({
   title,
@@ -59,10 +62,9 @@ function ProjectScrabbleHelper() {
   ];
   const images = [
     {
-      src: "../assets/images/scrabble-helper/dark_mode_view_1.png",
+      src: `${SCRABBLE}/dark_mode_view_1.png`,
       alt: "Scrabble Helper screenshot Dark Mode",
     },
-
   ];
   return (
     <ProjectCard
@@ -87,7 +89,7 @@ function ProjectPortfolio() {
   ];
   const images = [
     {
-      src: "../assets/images/jowee-portfolio/my_ss_1.png",
+      src: `${PORTFOLIO}/my_ss_1.png`,
       alt: "Responsive Portfolio screenshot",
     },
   ];
@@ -116,7 +118,7 @@ function ProjectTAFE() {
   ];
   const images = [
     {
-      src: "../assets/images/tafeqld/ss_1.png",
+      src: `${TAFEQLD}/ss_1.png`,
       alt: "Project Three screenshot",
     },
   ];
@@ -148,7 +150,7 @@ function ProjectALDI() {
     { label: "Agile Methodologies", icon: "agile" },
   ];
   const images = [
-    { src: "../assets/images/symbio/ss_1.png", alt: "Project Four screenshot" },
+    { src: `${SYMBIO}/ss_1.png`, alt: "Project Four screenshot" },
   ];
   return (
     <ProjectCard
