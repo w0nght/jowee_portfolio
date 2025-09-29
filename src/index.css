@@ -233,6 +233,23 @@ HERO SECTION + ABOUT SECTION
   margin-top: 1.5rem;
 }
 
+.hero-social {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-top: 16px;
+  font-size: 1.8rem;
+}
+
+.hero-social a {
+  color: var(--accent-orange);
+  transition: color 0.3s ease;
+}
+
+.hero-social a:hover {
+  color: var(--accent-cyan);
+}
+
 /* =============================
 PROFILE PICTURE
 ============================= */
