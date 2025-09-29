@@ -82,12 +82,6 @@ export default function Navbar() {
               </a>
             )
           )}
-
-          {isSmallScreen && (
-            <button className="nav-btn nav-close-btn" onClick={handleMenuClick}>
-              <FaTimes />
-            </button>
-          )}
         </div>
 
         {isSmallScreen && (

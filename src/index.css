@@ -101,7 +101,7 @@ NAVBAR
 }
 
 .nav-logo {
-  font-size: 1.25rem;
+  font-size: 1.85rem;
   font-weight: var(--font-bold);
   color: var(--accent-orange);
   display: inline-flex;
@@ -121,12 +121,8 @@ NAVBAR
   letter-spacing: 1px;
   stroke-dasharray: 420;
   stroke-dashoffset: 0; /* visible by default */
-  transition: stroke 0.4s ease;
-}
-
-.nav-logo:hover .logo-stroke {
-  animation: draw-stroke 2.6s ease-in-out infinite,
-    color-cycle 2.6s ease-in-out infinite;
+  animation: draw-stroke 4.6s ease-in-out infinite,
+    color-cycle 4.6s ease-in-out infinite;
 }
 
 @keyframes draw-stroke {
