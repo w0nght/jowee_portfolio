@@ -1,0 +1,45 @@
+.footer {
+  position: relative;
+  padding: 2rem 1rem;
+  text-align: center;
+  font-size: 0.875rem;
+  color: var(--text-muted);
+  background: var(--bg-secondary);
+  margin-top: 3rem;
+  border-top: 1px solid var(--border-color);
+}
+
+/* Back to top button */
+.back-to-top {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  width: 48px;
+  height: 48px;
+  /* border: none; */
+  border-radius: 50%;
+  background: var(--accent-orange);
+  color: white;
+  font-size: 1.25rem;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  opacity: 0;
+  pointer-events: none; /* Prevent interaction when hidden */
+  z-index: 999;
+}
+.back-to-top svg {
+  position: relative;
+  top: 1px; /* vertical adjustment */
+  right: 9.5px; /* horizontal adjustment if needed */
+}
+
+.back-to-top.show {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.back-to-top:hover {
+  transform: translateY(-4px);
+  background: var(--accent-cyan);
+}

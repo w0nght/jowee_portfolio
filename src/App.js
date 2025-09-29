@@ -11,6 +11,7 @@ import CaseStudyThree from "./pages/CaseStudyThree";
 import CaseStudyFour from "./pages/CaseStudyFour";
 import ExperienceSection from "./components/ExperienceSection";
 import About from "./pages/About";
+import Footer from "./components/Footer";
 
 function App() {
   return (
@@ -37,7 +38,9 @@ function App() {
         <Route path="/projects/four" element={<CaseStudyFour />} />
         <Route path="/about" element={<About />} />
       </Routes>
-      {/* More sections: Experience, Skills, Footer */}
+
+      {/* Footer shown across all pages so put it outside the Routes */}
+      <Footer />
     </>
   );
 }
