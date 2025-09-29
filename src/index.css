@@ -15,6 +15,7 @@
   --text-muted: #bdbdbd;
   --text-dark: #000000;
   --accent-orange: #ff9800;
+  --accent-darker-orange: #e67c00;
   --accent-orange-hover: #ffb84d;
   --accent-cyan: #58afd1;
   --tag-bg: #2a2a2a;
@@ -178,6 +179,11 @@ NAVBAR
   width: 100%;
 }
 
+/* Navbar CV button */
+.navbar .btn {
+  color: var(--accent-darker-orange);
+}
+
 .hamburger {
   display: none;
   color: var(--text-light);
@@ -185,22 +191,36 @@ NAVBAR
   cursor: pointer;
 }
 
+/* Overlay */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* semi-transparent black */
+  z-index: 5; /* make sure it's above page content but below menu if needed */
+}
+
 /* =============================
 HERO SECTION + ABOUT SECTION
 ============================= */
-.hero, .about {
+.hero,
+.about {
   max-width: var(--max-width);
   margin: 0 auto;
   padding: 4rem 2rem;
   text-align: center;
 }
 
-.hero h1, .about h1 {
+.hero h1,
+.about h1 {
   font-size: 2.5rem;
   margin-bottom: 0.5rem;
 }
 
-.hero h2, .about h2 {
+.hero h2,
+.about h2 {
   font-size: 1.5rem;
   color: var(--text-muted);
   margin-bottom: 1rem;
@@ -220,7 +240,7 @@ HERO SECTION + ABOUT SECTION
 /* =============================
 PROFILE PICTURE
 ============================= */
-.profile-picture {
+.profile-circle {
   width: 200px;
   height: 200px;
   border-radius: 50%;
@@ -232,13 +252,13 @@ PROFILE PICTURE
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.profile-picture:hover {
+.profile-circle:hover {
   transform: scale(1.05);
   box-shadow: 0 6px 20px var(--shadow-strong);
 }
 
 @media (max-width: 768px) {
-  .profile-picture {
+  .profile-circle {
     width: 150px;
     height: 150px;
     margin-bottom: 1.5rem;
@@ -246,7 +266,7 @@ PROFILE PICTURE
 }
 
 @media (max-width: 480px) {
-  .profile-picture {
+  .profile-circle {
     width: 120px;
     height: 120px;
     margin-bottom: 1rem;
@@ -270,12 +290,9 @@ CASE STUDY PAGES
   margin: 0 auto;
   padding: 3rem 2rem;
 }
-.case-study h1 {
+.case-study h2 {
   margin-top: 0;
   color: var(--accent-orange);
-}
-.case-study h2 {
-  color: var(--text-light);
 }
 .case-study ul {
   padding-left: 1.25rem;

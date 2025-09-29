@@ -1,6 +1,18 @@
 import { useState, useRef, useEffect } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
 
+const MENU_LINKS = [
+  { label: "About Me", href: "/about" },
+  { label: "Projects", href: "/#projects" },
+  { label: "Experience", href: "/#experience" },
+  {
+    label: "Download CV",
+    href: "/Joey Wong CV 2025.pdf",
+    isBtn: true,
+    download: true,
+  },
+];
+
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [isSmallScreen, setIsSmallScreen] = useState(false);
@@ -10,16 +22,13 @@ export default function Navbar() {
     function handleResize() {
       setIsSmallScreen(window.innerWidth <= 768);
     }
-
-    handleResize(); // Set initial value
+    handleResize();
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
   useEffect(() => {
-    if (!isSmallScreen) {
-      setIsOpen(false); // Close menu when screen size changes to large
-    }
+    if (!isSmallScreen) setIsOpen(false);
   }, [isSmallScreen]);
 
   useEffect(() => {
@@ -28,69 +37,65 @@ export default function Navbar() {
         setIsOpen(false);
       }
     }
-
     document.addEventListener("mousedown", handleClickOutside);
-    return () => {
-      document.removeEventListener("mousedown", handleClickOutside);
-    };
+    return () => document.removeEventListener("mousedown", handleClickOutside);
   }, [menuRef]);
 
-  const handleMenuClick = () => {
-    setIsOpen(!isOpen);
-  };
+  const handleMenuClick = () => setIsOpen(!isOpen);
 
   return (
-    <nav className="navbar">
-      <a href="/" className="nav-logo" aria-label="Home">
-        <svg
-          className="logo-svg"
-          viewBox="0 0 180 36"
-          width="200"
-          height="40"
-          role="img"
-          aria-hidden="true"
-        >
-          <text x="0" y="26" className="logo-stroke">
-            {"<"}JW {"/>"}
-          </text>
-        </svg>
-      </a>
-      <div className={`nav-links ${isOpen ? "open" : ""}`} ref={menuRef}>
-        {/* <a href="/#home">Home</a> */}
-        <a href="/about" onClick={handleMenuClick}>
-          About Me
+    <>
+      {/* Overlay */}
+      {isOpen && <div className="overlay" onClick={handleMenuClick}></div>}
+
+      <nav className="navbar">
+        <a href="/" className="nav-logo" aria-label="Home">
+          <svg
+            className="logo-svg"
+            viewBox="0 0 180 36"
+            width="200"
+            height="40"
+            role="img"
+            aria-hidden="true"
+          >
+            <text x="0" y="26" className="logo-stroke">
+              {"<"}JW {"/>"}
+            </text>
+          </svg>
         </a>
-        <a href="/#projects" onClick={handleMenuClick}>
-          Projects
-        </a>
-        <a href="/#experience" onClick={handleMenuClick}>
-          Experience
-        </a>
-        {/* <a href="/#contact">Contact</a> */}
-        <a
-          href="/Joey Wong CV 2025.pdf"
-          className="btn"
-          download
-          onClick={handleMenuClick}
-        >
-          Download CV
-        </a>
+
+        <div className={`nav-links ${isOpen ? "open" : ""}`} ref={menuRef}>
+          {MENU_LINKS.map((link) =>
+            link.isBtn ? (
+              <a
+                key={link.label}
+                href={link.href}
+                className="btn"
+                download={link.download}
+                onClick={handleMenuClick}
+              >
+                {link.label}
+              </a>
+            ) : (
+              <a key={link.label} href={link.href} onClick={handleMenuClick}>
+                {link.label}
+              </a>
+            )
+          )}
+
+          {isSmallScreen && (
+            <button className="nav-btn nav-close-btn" onClick={handleMenuClick}>
+              <FaTimes />
+            </button>
+          )}
+        </div>
+
         {isSmallScreen && (
-          <button className="nav-btn nav-close-btn" onClick={handleMenuClick}>
-            <FaTimes />
+          <button className="nav-btn" onClick={handleMenuClick}>
+            {isOpen ? <FaTimes /> : <FaBars />}
           </button>
         )}
-      </div>
-      {isSmallScreen &&
-        (isOpen ? (
-          <button className="nav-btn" onClick={handleMenuClick}>
-            <FaTimes />
-          </button>
-        ) : (
-          <button className="nav-btn" onClick={handleMenuClick}>
-            <FaBars />
-          </button>
-        ))}
-    </nav>
+      </nav>
+    </>
   );
 }
