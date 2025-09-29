@@ -309,6 +309,10 @@ video.gallery-media {
     padding: 16px;
   }
 
+  .gallery-item {
+    margin-block: 12px; /* slightly more on very small screens */
+  }
+
   .media-overlay {
     padding: 16px;
   }
@@ -342,6 +346,7 @@ video.gallery-media {
 
   .gallery-item {
     border-radius: 8px;
+    margin-block: 12px; /* slightly more on very small screens */
   }
 
   .media-overlay {
@@ -393,6 +398,10 @@ video.gallery-media {
 
   .gallery-item {
     border-radius: 6px;
+  }
+
+  .gallery-item {
+    margin-block: 10px; /* slightly more on very small screens */
   }
 }
 
