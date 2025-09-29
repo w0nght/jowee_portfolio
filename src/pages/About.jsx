@@ -4,8 +4,8 @@ export default function About() {
       <h1>Hi again, this is Joey!</h1>
       <img
         src="/assets/images/profile_pic.jpg"
-        className="profile-picture"
-        alt="Joey Wong portrait"
+        className="profile-circle"
+        alt="Joey Wong"
       />
 
       <Intro />

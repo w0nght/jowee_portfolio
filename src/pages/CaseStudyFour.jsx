@@ -1,6 +1,7 @@
 import Tag from "../components/Tag";
 
-const tags = [
+// Static data
+const techTags = [
   { label: "HTML", icon: "html" },
   { label: "CSS", icon: "css" },
   { label: "JavaScript", icon: "javascript" },
@@ -18,12 +19,12 @@ const tags = [
 export default function CaseStudyALDI() {
   return (
     <section id="case-study" className="case-study">
-      <h1>
+      <h2>
         Seamless Provisioning for ALDI Mobile (Symbio Networks) Case Study
-      </h1>
+      </h2>
 
       <div className="tags">
-        {tags.map((t) => (
+        {techTags.map((t) => (
           <Tag key={t.label} label={t.label} icon={t.icon} />
         ))}
       </div>
@@ -42,10 +43,10 @@ export default function CaseStudyALDI() {
         </a>
       </div>
 
-      <h2>Screenshots</h2>
+      {/* <h2>Screenshots</h2>
       <ul>
         <li>(Coming soon)</li>
-      </ul>
+      </ul> */}
     </section>
   );
 }

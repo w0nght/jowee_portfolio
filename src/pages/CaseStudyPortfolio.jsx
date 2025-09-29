@@ -106,7 +106,7 @@ export default function CaseStudyPortfolio() {
   // Clean structure: Long return split into ProjectBackground, ProjectProcess, ProjectOutcome.
   return (
     <section id="case-study" className="case-study">
-      <h1>Responsive Portfolio Case Study</h1>
+      <h2>Responsive Portfolio Case Study</h2>
 
       {/* Tech Tags */}
       <div className="tags">
