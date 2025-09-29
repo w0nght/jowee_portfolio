@@ -49,17 +49,15 @@ const CustomGallery = ({ images }) => {
   return (
     <div className="custom-gallery">
       {images.map((media, index) => {
-        // Ensure width and height are numbers, not strings
-        const width =
-          typeof media.width === "string" ? parseInt(media.width) : media.width;
-        const height =
-          typeof media.height === "string"
-            ? parseInt(media.height)
-            : media.height;
+        const width = media.width;
+        const height = media.height;
+        const aspectRatio = width / height;
+        const itemHeight = Math.round(height / (width / 300)); // base calculation
 
-        // Calculate aspect ratio safely
-        const aspectRatio = width && height ? width / height : 4 / 3; // Fallback
-        const itemHeight = Math.round((height / (width / 300)) * 0.8); // Adjusted calculation
+        // Landscape images can span full row if desired
+        const isFullWidth =
+          media.orientation === "landscape" && width / height > 1.5;
+        const gridColumnSpan = isFullWidth ? "1 / -1" : "auto";
 
         return (
           <div
@@ -68,6 +66,7 @@ const CustomGallery = ({ images }) => {
             style={{
               "--item-height": itemHeight,
               "--aspect-ratio": aspectRatio,
+              gridColumn: gridColumnSpan, // <-- span full row if landscape
             }}
             data-type={media.type}
             onMouseEnter={() => handleMouseEnter(index)}
@@ -123,7 +122,7 @@ const CustomGallery = ({ images }) => {
                 height={height}
                 loading="lazy"
                 style={{
-                  aspectRatio: `${width}/${height}`,
+                  aspectRatio: `${media.width}/${media.height}`,
                   backgroundColor: "#f0f0f0", // Light fallback for images
                 }}
                 onError={(e) => {

@@ -9,22 +9,27 @@ export const IMAGE_PATHS = {
 export const createMedia = (
   basePath,
   filename,
-  width,
-  height,
+  width, // natural width
+  height, // natural height
   caption,
   tags = [],
   type = "image",
   autoplayOnHover = false
-) => ({
-  src: `${basePath}${filename}`,
-  width,
-  height,
-  caption,
-  type, // 'image' or 'video'
-  autoplayOnHover,
-  tags: Array.isArray(tags)
-    ? tags.map((tag) =>
-        typeof tag === "string" ? { value: tag, title: tag } : tag
-      )
-    : [],
-});
+) => {
+  const orientation = width >= height ? "landscape" : "portrait";
+
+  return {
+    src: `${basePath}${filename}`,
+    width,
+    height,
+    orientation,
+    caption,
+    type, // 'image' or 'video'
+    autoplayOnHover,
+    tags: Array.isArray(tags)
+      ? tags.map((tag) =>
+          typeof tag === "string" ? { value: tag, title: tag } : tag
+        )
+      : [],
+  };
+};
