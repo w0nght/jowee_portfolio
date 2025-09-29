@@ -16,7 +16,6 @@ import {
 import {
   faCode,
   faFolderOpen,
-  faWandMagicSparkles,
   faDatabase,
   faPalette,
   faCubes,
@@ -36,7 +35,7 @@ const iconMap = {
 
   // frameworks & libraries
   react: faReact,
-  jquery: faFolderOpen, // fallback: no official jQuery icon in FA Free  
+  jquery: faFolderOpen, // fallback: no official jQuery icon in FA Free
   bootstrap: faBootstrap,
 
   // backend & devops
