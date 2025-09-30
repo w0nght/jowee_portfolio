@@ -93,7 +93,7 @@ NAVBAR
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 2rem;
+  padding: 0.6rem 2rem;
   background: var(--bg-card);
   position: sticky;
   top: 0;
@@ -101,9 +101,8 @@ NAVBAR
 }
 
 .logo-img {
-  height: 60px;
+  height: 56px;
   width: auto;
-  border-radius: 8px;
 }
 
 .nav-logo {
