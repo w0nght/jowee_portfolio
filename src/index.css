@@ -100,6 +100,12 @@ NAVBAR
   z-index: 1000;
 }
 
+.logo-img {
+  height: 60px;
+  width: auto;
+  border-radius: 8px;
+}
+
 .nav-logo {
   font-size: 1.85rem;
   font-weight: var(--font-bold);
@@ -109,7 +115,7 @@ NAVBAR
 }
 
 .logo-svg {
-  display: block;
+  display: none;
 }
 
 .logo-stroke {

@@ -50,6 +50,11 @@ export default function Navbar() {
 
       <nav className="navbar">
         <a href="/" className="nav-logo" aria-label="Home">
+          <img
+            src="/mylogo4_cropped.png"
+            className="logo-img"
+            alt="Joey Wong Logo"
+          />
           <svg
             className="logo-svg"
             viewBox="0 0 180 36"
