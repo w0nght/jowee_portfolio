@@ -27,27 +27,42 @@ export default function Navbar() {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
+  // close menu if screen becomes large
   useEffect(() => {
     if (!isSmallScreen) setIsOpen(false);
   }, [isSmallScreen]);
 
   useEffect(() => {
+    // Close menu if clicking outside of it
     function handleClickOutside(event) {
-      if (menuRef.current && !menuRef.current.contains(event.target)) {
+      if (
+        isOpen &&
+        menuRef.current &&
+        !menuRef.current.contains(event.target)
+      ) {
         setIsOpen(false);
       }
     }
-    document.addEventListener("mousedown", handleClickOutside);
-    return () => document.removeEventListener("mousedown", handleClickOutside);
-  }, [menuRef]);
 
-  const handleMenuClick = () => setIsOpen(!isOpen);
+    // only listens when the menu is actually open
+    if (isOpen) {
+      document.addEventListener("mousedown", handleClickOutside);
+    } else {
+      document.removeEventListener("mousedown", handleClickOutside);
+    }
+
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [isOpen]);
+
+  const toggleMenu = () => setIsOpen((prev) => !prev);
 
   return (
     <>
       {/* Overlay */}
       {isOpen && isSmallScreen && (
-        <div className="overlay" onClick={handleMenuClick}></div>
+        <div className="overlay" onClick={toggleMenu}></div>
       )}
 
       <nav className="navbar">
@@ -79,12 +94,12 @@ export default function Navbar() {
                 href={link.href}
                 className="btn"
                 download={link.download}
-                onClick={handleMenuClick}
+                onClick={toggleMenu}
               >
                 {link.label}
               </a>
             ) : (
-              <a key={link.label} href={link.href} onClick={handleMenuClick}>
+              <a key={link.label} href={link.href} onClick={toggleMenu}>
                 {link.label}
               </a>
             )
@@ -92,7 +107,7 @@ export default function Navbar() {
         </div>
 
         {isSmallScreen && (
-          <button className="nav-btn" onClick={handleMenuClick}>
+          <button className="nav-btn" onClick={toggleMenu}>
             {isOpen ? <FaTimes /> : <FaBars />}
           </button>
         )}
