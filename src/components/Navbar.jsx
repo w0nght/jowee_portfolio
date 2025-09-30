@@ -46,7 +46,9 @@ export default function Navbar() {
   return (
     <>
       {/* Overlay */}
-      {isOpen && <div className="overlay" onClick={handleMenuClick}></div>}
+      {isOpen && isSmallScreen && (
+        <div className="overlay" onClick={handleMenuClick}></div>
+      )}
 
       <nav className="navbar">
         <a href="/" className="nav-logo" aria-label="Home">
