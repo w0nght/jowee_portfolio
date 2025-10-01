@@ -2,7 +2,7 @@
 
 A responsive developer portfolio built with **React**, showcasing projects, case studies, and experience. Designed for recruiters, hiring managers, and fellow developers to explore my work and technical skills.
 
-Live demo: 👉 https://joeywong4work.netlify.app](https://joeywong4work.netlify.app) <!-- replace with actual Netlify link -->
+Live demo: 👉 (https://joeywong4work.netlify.app)
 
 ---
 
@@ -70,7 +70,7 @@ npm install
 npm start
 ```
 
-The app will be available at [http://localhost:3000]
+The app will be available at (http://localhost:3000)
 
 ---
 
