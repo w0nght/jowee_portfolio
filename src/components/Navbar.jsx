@@ -1,6 +1,12 @@
 import { useState, useRef, useEffect } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
 
+const { trackCVDownload } = useGATracking();
+
+const handleCVDownload = () => {
+  trackCVDownload();
+};
+
 const MENU_LINKS = [
   { label: "About Me", href: "/about" },
   { label: "Projects", href: "/#projects" },
@@ -10,6 +16,7 @@ const MENU_LINKS = [
     href: "/Joey Wong CV 2025.pdf",
     isBtn: true,
     download: true,
+    onClick: handleCVDownload,
   },
 ];
 
