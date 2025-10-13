@@ -1,7 +1,14 @@
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { FaEnvelope } from "react-icons/fa";
+import useGATracking from "../hooks/useGATracking";
 
 export default function Hero() {
+  const { trackCVDownload } = useGATracking();
+
+  const handleCVDownload = () => {
+    trackCVDownload();
+  };
+
   return (
     <section id="home" className="hero">
       <h1>Hi, I’m Joey!</h1>
@@ -16,7 +23,7 @@ export default function Hero() {
         <a href="/#projects">
           <button>View Projects</button>
         </a>
-        <a href="/Joey Wong CV 2025.pdf" download>
+        <a href="/Joey Wong CV 2025.pdf" download onClick={handleCVDownload}>
           <button>Download CV</button>
         </a>
       </div>
