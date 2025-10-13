@@ -1,9 +1,15 @@
-import { FaGithub, FaLinkedin } from "react-icons/fa";
-import { FaEnvelope } from "react-icons/fa";
+import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa";
 import useGATracking from "../hooks/useGATracking";
+import { SOCIAL_LINKS } from "../data/socialLinks";
+
+const ICONS = {
+  FaGithub,
+  FaLinkedin,
+  FaEnvelope,
+};
 
 export default function Hero() {
-  const { trackCVDownload } = useGATracking();
+  const { trackCVDownload, trackSocialClick } = useGATracking();
 
   const handleCVDownload = () => {
     trackCVDownload();
@@ -31,39 +37,22 @@ export default function Hero() {
       {/* Social Links */}
       <p>Feel free to reach out and collaborate.</p>
       <div className="hero-social">
-        <a
-          href="https://github.com/w0nght"
-          target="_blank"
-          rel="noopener noreferrer"
-          title="GitHub"
-        >
-          <FaGithub />
-        </a>
-        <a
-          href="https://www.linkedin.com/in/joey-wong-4-work/"
-          target="_blank"
-          rel="noopener noreferrer"
-          title="LinkedIn"
-          onClick={() =>
-            window.gtag &&
-            window.gtag("event", "click", {
-              event_category: "outbound",
-              event_label: "LinkedIn Profile",
-              transport_type: "beacon",
-            })
-          }
-        >
-          <FaLinkedin />
-        </a>
-        <a
-          href="mailto:joeywong4work@gmail.com"
-          target="_blank"
-          rel="noopener noreferrer"
-          title="Email"
-          aria-label="Email"
-        >
-          <FaEnvelope />
-        </a>
+        {Object.entries(SOCIAL_LINKS).map(([key, { url, label, icon }]) => {
+          const Icon = ICONS[icon];
+          return (
+            <a
+              key={key}
+              href={url}
+              target="_blank"
+              rel="noopener noreferrer"
+              title={label}
+              aria-label={label}
+              onClick={() => trackSocialClick(key, url)}
+            >
+              <Icon />
+            </a>
+          );
+        })}
       </div>
     </section>
   );

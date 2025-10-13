@@ -1,4 +1,5 @@
 import { useEffect, useRef } from 'react';
+import { useLocation } from 'react-router-dom';
 import useGATracking from '../hooks/useGATracking';
 
 /**
@@ -11,6 +12,7 @@ import useGATracking from '../hooks/useGATracking';
 const GAScrollTracker = () => {
     const { trackScrollDepth } = useGATracking();
     const trackedMilestones = useRef(new Set());
+    const location = useLocation();
 
     useEffect(() => {
         const handleScroll = () => {
@@ -51,7 +53,7 @@ const GAScrollTracker = () => {
     // Reset tracked milestones when route changes
     useEffect(() => {
         trackedMilestones.current.clear();
-    }, [window.location.pathname]);
+    }, [location.pathname]);
 
     return null; // This component doesn't render anything
 };
