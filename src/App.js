@@ -4,7 +4,7 @@ import { Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import HashScroll from "./components/HashScroll";
 import Hero from "./components/Hero";
-import Projects from "./components/Projects";
+// import Projects from "./components/Projects";
 import CaseStudyScrabbleHelper from "./pages/CaseStudyScrabbleHelper";
 import CaseStudyPortfolio from "./pages/CaseStudyPortfolio";
 import CaseStudyThree from "./pages/CaseStudyThree";
@@ -13,6 +13,7 @@ import ExperienceSection from "./components/ExperienceSection";
 import About from "./pages/About";
 import Footer from "./components/Footer";
 import GAScrollTracker from "./components/GAScrollTracker";
+import ProjectsNew from "./components/ProjectsNew";
 
 function App() {
   return (
@@ -26,7 +27,8 @@ function App() {
           element={
             <>
               <Hero />
-              <Projects />
+              <ProjectsNew />
+              {/* <Projects /> */}
               <ExperienceSection />
             </>
           }
