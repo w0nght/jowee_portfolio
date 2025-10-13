@@ -64,7 +64,7 @@ export default function Navbar() {
       href: "/Joey Wong CV 2025.pdf",
       isBtn: true,
       download: true,
-      onClick: handleCVDownload,
+      onClick: () => handleCVDownload(),
     },
   ];
 
