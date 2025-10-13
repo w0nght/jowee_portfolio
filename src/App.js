@@ -12,12 +12,14 @@ import CaseStudyFour from "./pages/CaseStudyFour";
 import ExperienceSection from "./components/ExperienceSection";
 import About from "./pages/About";
 import Footer from "./components/Footer";
+import GAScrollTracker from "./components/GAScrollTracker";
 
 function App() {
   return (
     <>
       <Navbar />
       <HashScroll />
+      <GAScrollTracker />
       <Routes>
         <Route
           path="/"
