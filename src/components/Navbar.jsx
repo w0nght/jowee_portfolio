@@ -1,24 +1,8 @@
 import { useState, useRef, useEffect } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
+import useGATracking from "../hooks/useGATracking";
 
-const { trackCVDownload } = useGATracking();
 
-const handleCVDownload = () => {
-  trackCVDownload();
-};
-
-const MENU_LINKS = [
-  { label: "About Me", href: "/about" },
-  { label: "Projects", href: "/#projects" },
-  { label: "Experience", href: "/#experience" },
-  {
-    label: "Download CV",
-    href: "/Joey Wong CV 2025.pdf",
-    isBtn: true,
-    download: true,
-    onClick: handleCVDownload,
-  },
-];
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -64,6 +48,25 @@ export default function Navbar() {
   }, [isOpen]);
 
   const toggleMenu = () => setIsOpen((prev) => !prev);
+
+  const { trackCVDownload } = useGATracking();
+
+  const handleCVDownload = () => {
+    trackCVDownload();
+  };
+
+  const MENU_LINKS = [
+    { label: "About Me", href: "/about" },
+    { label: "Projects", href: "/#projects" },
+    { label: "Experience", href: "/#experience" },
+    {
+      label: "Download CV",
+      href: "/Joey Wong CV 2025.pdf",
+      isBtn: true,
+      download: true,
+      onClick: handleCVDownload,
+    },
+  ];
 
   return (
     <>
