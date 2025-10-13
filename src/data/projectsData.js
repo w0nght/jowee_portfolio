@@ -27,7 +27,7 @@ export const PROJECTS = {
     PORTFOLIO: {
         title: "Responsive Portfolio",
         description:
-            "This portfolio site itself — built with React, showcasing reusable components and modular design.",
+            "This portfolio site itself. Built with React, showcasing reusable components and modular design.",
         liveUrl: "",
         caseStudyUrl: "/projects/portfolio",
         tags: [

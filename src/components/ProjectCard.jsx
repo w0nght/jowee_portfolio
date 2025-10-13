@@ -1,4 +1,5 @@
 import Tag from "./Tag";
+import useGATracking from "../hooks/useGATracking";
 
 export default function ProjectCard({
     title,
@@ -8,6 +9,12 @@ export default function ProjectCard({
     liveUrl,
     caseStudyUrl,
 }) {
+    const { trackOutboundClick } = useGATracking();
+
+    const trackLiveUrl = () => {
+        trackOutboundClick("live_demo", liveUrl, title);
+    };
+
     return (
         <div className="project-card">
             <div className="project-content">
@@ -25,11 +32,11 @@ export default function ProjectCard({
                 {/* Buttons */}
                 <div className="buttons">
                     {liveUrl ? (
-                        <a href={liveUrl} target="_blank" rel="noreferrer">
+                        <a href={liveUrl} target="_blank" rel="noreferrer" onClick={() => trackLiveUrl()}>
                             <button>View Live</button>
                         </a>
                     ) : (
-                        <button disabled title="Coming soon">
+                        <button disabled title="This site!">
                             View Live
                         </button>
                     )}

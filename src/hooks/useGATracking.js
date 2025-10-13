@@ -24,7 +24,7 @@ const useGATracking = () => {
     const trackEvent = (eventName, eventParams = {}) => {
         if (isGAAvailable()) {
             window.gtag('event', eventName, eventParams);
-            console.log(`GA4 Event: ${eventName}`, eventParams);
+            // console.log(`GA4 Event: ${eventName}`, eventParams);
         } else {
             console.warn('Google Analytics not loaded');
         }
