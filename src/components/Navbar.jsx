@@ -49,10 +49,6 @@ export default function Navbar() {
 
   const { trackCVDownload } = useGATracking();
 
-  const handleCVDownload = () => {
-    trackCVDownload();
-  };
-
   const MENU_LINKS = [
     { label: "About Me", href: "/about" },
     { label: "Projects", href: "/#projects" },
@@ -62,7 +58,7 @@ export default function Navbar() {
       href: "/Joey Wong CV 2025.pdf",
       isBtn: true,
       download: true,
-      onClick: handleCVDownload,
+      onClick: trackCVDownload,
     },
   ];
 
