@@ -2,8 +2,6 @@ import { useState, useRef, useEffect } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
 import useGATracking from "../hooks/useGATracking";
 
-
-
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [isSmallScreen, setIsSmallScreen] = useState(false);
@@ -64,7 +62,7 @@ export default function Navbar() {
       href: "/Joey Wong CV 2025.pdf",
       isBtn: true,
       download: true,
-      onClick: () => handleCVDownload(),
+      onClick: handleCVDownload,
     },
   ];
 
@@ -104,12 +102,24 @@ export default function Navbar() {
                 href={link.href}
                 className="btn"
                 download={link.download}
-                onClick={toggleMenu}
+                onClick={(e) => {
+                  if (link.onClick) link.onClick(e); // run GA tracking if present
+                  toggleMenu(); // then close menu
+                }}
               >
                 {link.label}
               </a>
             ) : (
-              <a key={link.label} href={link.href} onClick={toggleMenu}>
+              <a key={link.label} href={link.href} onClick={(e) => {
+                if (link.onClick) {
+                  e.preventDefault();
+                  link.onClick(e);
+                  setTimeout(() => {
+                    window.location.href = link.href;
+                  }, 300);
+                }
+                toggleMenu();
+              }}>
                 {link.label}
               </a>
             )
