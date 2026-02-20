@@ -55,7 +55,7 @@ export default function Navbar() {
     { label: "Experience", href: "/#experience" },
     {
       label: "Download CV",
-      href: "/Joey Wong CV 2025.pdf",
+      href: "/Joey Wong CV 2026.pdf",
       isBtn: true,
       download: true,
       onClick: trackCVDownload,
