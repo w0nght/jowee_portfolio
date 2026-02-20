@@ -29,7 +29,7 @@ export default function Hero() {
         <a href="/#projects">
           <button>View Projects</button>
         </a>
-        <a href="/Joey Wong CV 2025.pdf" download onClick={handleCVDownload}>
+        <a href="/Joey Wong CV 2026.pdf" download onClick={handleCVDownload}>
           <button>Download CV</button>
         </a>
       </div>
