@@ -41,7 +41,7 @@ const images = [
 };
 
 // Sub-components for cleaner structure
-const ProjectBackground = () => (
+const Intro = () => (
   <>
     <h2>🎯 Background</h2>
     <p>
@@ -52,7 +52,7 @@ const ProjectBackground = () => (
   </>
 );
 
-const ProjectImplementation = () => (
+const Process = () => (
   <>
     <h2>🪛 Implementation</h2>
     <h3>Reusable Components</h3>
@@ -84,7 +84,7 @@ const ProjectImplementation = () => (
   </>
 );
 
-const ProjectFutureProofing = () => (
+const FutureProofing = () => (
   <>
     <h2>🔮 Future-Proofing</h2>
     <h3>State Management & Hooks</h3>
@@ -169,7 +169,7 @@ const ProjectFutureProofing = () => (
   </>
 );
 
-const ProjectOutcome = () => (
+const Outcome = () => (
   <>
     <h2>😄 Outcome</h2>
     <p>
@@ -189,7 +189,6 @@ const ProjectOutcome = () => (
 );
 
 export default function CaseStudyPortfolio() {
-  // Clean structure: Long return split into ProjectBackground, ProjectProcess, ProjectOutcome.
   return (
     <section id="case-study" className="case-study">
       <h2>Responsive Portfolio Case Study</h2>
@@ -202,10 +201,10 @@ export default function CaseStudyPortfolio() {
       </div>
 
       {/* Sections */}
-      <ProjectBackground />
-      <ProjectImplementation />
-      <ProjectFutureProofing />
-      <ProjectOutcome />
+      <Intro />
+      <Process />
+      <FutureProofing />
+      <Outcome />
 
       {/* Gallery */}
       <h2>Screenshots</h2>
