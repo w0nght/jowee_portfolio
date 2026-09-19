@@ -12,6 +12,7 @@ import {
   faBootstrap,
   faFigma,
   faAws,
+  faTailwindCss,
 } from "@fortawesome/free-brands-svg-icons";
 import {
   faCode,
@@ -24,14 +25,17 @@ import {
   faUniversalAccess,
   faArrowsRotate,
   faPlaneCircleCheck,
+  faBolt,
 } from "@fortawesome/free-solid-svg-icons";
 
 const iconMap = {
   // core languages & web fundamentals
   html: faHtml5,
   css: faCss3Alt,
+  tailwind: faTailwindCss,
   javascript: faJs,
   php: faPhp,
+  vite: faBolt,
 
   // frameworks & libraries
   react: faReact,
