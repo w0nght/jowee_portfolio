@@ -20,7 +20,7 @@ export const PROJECTS = {
         images: [
             {
                 src: `${PICKNSPIN}/full-view.png`,
-                alt: "Pick and Spin screenshot Dark Mode",
+                alt: "Pick and Spin web app preview",
             },
         ],
     },
@@ -40,7 +40,7 @@ export const PROJECTS = {
         images: [
             {
                 src: `${SCRABBLE}/dark_mode_view_1.png`,
-                alt: "Scrabble Helper screenshot Dark Mode",
+                alt: "Scrabble Helper web app preview",
             },
         ],
     },
@@ -50,7 +50,7 @@ export const PROJECTS = {
         description:
             "This portfolio site itself. Built with React, showcasing reusable components and modular design.",
         liveUrl: "",
-        caseStudyUrl: "/projects/portfolio",
+        caseStudyUrl: "/projects/personal-portfolio",
         tags: [
             { label: "HTML", icon: "html" },
             { label: "CSS", icon: "css" },
@@ -72,7 +72,7 @@ export const PROJECTS = {
         description:
             "Developed engaging multimedia content for online and blended learning courses, with accessibility as a core focus.",
         liveUrl: "https://tafeqld.edu.au/courses/ways-to-study/tafe-at-school",
-        caseStudyUrl: "/projects/three",
+        caseStudyUrl: "/projects/tafe",
         tags: [
             { label: "HTML", icon: "html" },
             { label: "CSS", icon: "css" },
@@ -96,7 +96,7 @@ export const PROJECTS = {
         description:
             "Implemented custom monitoring and QA processes to ensure smooth deployments for ALDI Mobile provisioning systems.",
         liveUrl: "https://www.aldimobile.com.au/",
-        caseStudyUrl: "/projects/four",
+        caseStudyUrl: "/projects/aldi",
         tags: [
             { label: "HTML", icon: "html" },
             { label: "CSS", icon: "css" },

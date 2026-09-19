@@ -2,6 +2,7 @@ import Tag from "../components/Tag";
 // import CodeBlock from "../components/CodeBlock";
 import CustomGallery from "../components/Gallery";
 import { pickAndSpinImages } from "../data/caseStudyImages";
+import { PROJECTS } from "../data/projectsData";
 
 // Static data
 const techTags = [
@@ -29,7 +30,7 @@ export default function CaseStudyPickAndSpin() {
 
             <div style={{ margin: "1rem 0" }}>
                 <a
-                    href="https://pick-and-spin.netlify.app/"
+                    href={PROJECTS.PICK_AND_SPIN.liveUrl}
                     target="_blank"
                     rel="noreferrer"
                 >

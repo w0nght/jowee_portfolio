@@ -9,7 +9,7 @@ import CaseStudyPickAndSpin from "./pages/CaseStudyPickAndSpin";
 import CaseStudyScrabbleHelper from "./pages/CaseStudyScrabbleHelper";
 import CaseStudyPortfolio from "./pages/CaseStudyPortfolio";
 import CaseStudyThree from "./pages/CaseStudyThree";
-import CaseStudyFour from "./pages/CaseStudyFour";
+import CaseStudyALDI from "./pages/CaseStudyALDI";
 import ExperienceSection from "./components/ExperienceSection";
 import About from "./pages/About";
 import Footer from "./components/Footer";
@@ -36,9 +36,9 @@ function App() {
         />
         <Route path="/projects/pick-and-spin" element={<CaseStudyPickAndSpin />} />
         <Route path="/projects/scrabble-helper" element={<CaseStudyScrabbleHelper />} />
-        <Route path="/projects/portfolio" element={<CaseStudyPortfolio />} />
-        <Route path="/projects/three" element={<CaseStudyThree />} />
-        <Route path="/projects/four" element={<CaseStudyFour />} />
+        <Route path="/projects/personal-portfolio" element={<CaseStudyPortfolio />} />
+        <Route path="/projects/tafe" element={<CaseStudyThree />} />
+        <Route path="/projects/aldi" element={<CaseStudyALDI />} />
         <Route path="/about" element={<About />} />
       </Routes>
 

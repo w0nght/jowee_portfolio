@@ -100,7 +100,7 @@ function ProjectPortfolio() {
       tags={tags}
       images={images}
       liveUrl={undefined}
-      caseStudyUrl="/projects/portfolio"
+      caseStudyUrl="/projects/personal-portfolio"
     />
   );
 }
@@ -129,7 +129,7 @@ function ProjectTAFE() {
       tags={tags}
       images={images}
       liveUrl="https://tafeqld.edu.au/courses/ways-to-study/tafe-at-school"
-      caseStudyUrl="/projects/three"
+      caseStudyUrl="/projects/tafe"
     />
   );
 }
@@ -159,7 +159,7 @@ function ProjectALDI() {
       tags={tags}
       images={images}
       liveUrl="https://www.aldimobile.com.au/"
-      caseStudyUrl="/projects/four"
+      caseStudyUrl="/projects/aldi"
     />
   );
 }
