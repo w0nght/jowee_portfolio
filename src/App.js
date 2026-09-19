@@ -14,7 +14,7 @@ import ExperienceSection from "./components/ExperienceSection";
 import About from "./pages/About";
 import Footer from "./components/Footer";
 import GAScrollTracker from "./components/GAScrollTracker";
-import ProjectsNew from "./components/ProjectsNew";
+import FeatureProjects from "./components/FeatureProjects";
 
 function App() {
   return (
@@ -28,7 +28,7 @@ function App() {
           element={
             <>
               <Hero />
-              <ProjectsNew />
+              <FeatureProjects />
               {/* <Projects /> */}
               <ExperienceSection />
             </>

@@ -1,7 +1,7 @@
 import { PROJECTS } from "../data/projectsData";
 import ProjectCard from "./ProjectCard";
 
-export default function ProjectsNew() {
+export default function FeatureProjects() {
     return (
         <section id="projects">
             <h2>Featured Projects</h2>
