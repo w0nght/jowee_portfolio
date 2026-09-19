@@ -1,9 +1,30 @@
 // src/data/projectsData.js
 import { IMAGE_PATHS } from "./imagePaths";
-const { SCRABBLE, PORTFOLIO, SYMBIO, TAFEQLD } = IMAGE_PATHS;
+const { SCRABBLE, PORTFOLIO, SYMBIO, TAFEQLD, PICKNSPIN } = IMAGE_PATHS;
 
 
 export const PROJECTS = {
+    PICK_AND_SPIN: {
+        title: "Pick and Spin",
+        description:
+            "Pick & Spin is a random picker wheel built with React. It helps users make quick decisions by selecting a random item from a wheel.",
+        liveUrl: "https://pick-and-spin.netlify.app/",
+        caseStudyUrl: "/projects/pick-and-spin",
+        tags: [
+            { label: "HTML", icon: "html" },
+            { label: "Tailwind CSS", icon: "tailwind" },
+            { label: "JavaScript and JSX", icon: "javascript" },
+            { label: "React", icon: "react" },
+            { label: "Vite", icon: "vite" },
+        ],
+        images: [
+            {
+                src: `${PICKNSPIN}/full-view.png`,
+                alt: "Pick and Spin screenshot Dark Mode",
+            },
+        ],
+    },
+
     SCRABBLE_HELPER: {
         title: "Scrabble Helper",
         description:

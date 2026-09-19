@@ -1,6 +1,6 @@
 import { IMAGE_PATHS, createMedia } from "./imagePaths";
 
-const { SCRABBLE, PORTFOLIO } = IMAGE_PATHS;
+const { SCRABBLE, PORTFOLIO, PICKNSPIN } = IMAGE_PATHS;
 // SYMBIO, TAFEQLD
 
 // Landscape, full width 1600x900
@@ -63,6 +63,29 @@ export const portfolioImages = [
     1600,
     860,
     "Custom component can be reused!"
+  ),
+
+  // Add more images...
+];
+
+export const pickAndSpinImages = [
+  createMedia(
+    PICKNSPIN,
+    "dark-1.png",
+    600, 400,
+    "Dark theme"
+  ),
+  createMedia(
+    PICKNSPIN,
+    "light-1.png",
+    600, 400,
+    "Light theme"
+  ),
+  createMedia(
+    PICKNSPIN,
+    "dark-2.png",
+    1300, 760,
+    "Customisation wheel"
   ),
 
   // Add more images...

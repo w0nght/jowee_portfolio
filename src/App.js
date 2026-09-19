@@ -5,6 +5,7 @@ import Navbar from "./components/Navbar";
 import HashScroll from "./components/HashScroll";
 import Hero from "./components/Hero";
 // import Projects from "./components/Projects";
+import CaseStudyPickAndSpin from "./pages/CaseStudyPickAndSpin";
 import CaseStudyScrabbleHelper from "./pages/CaseStudyScrabbleHelper";
 import CaseStudyPortfolio from "./pages/CaseStudyPortfolio";
 import CaseStudyThree from "./pages/CaseStudyThree";
@@ -33,10 +34,8 @@ function App() {
             </>
           }
         />
-        <Route
-          path="/projects/scrabble-helper"
-          element={<CaseStudyScrabbleHelper />}
-        />
+        <Route path="/projects/pick-and-spin" element={<CaseStudyPickAndSpin />} />
+        <Route path="/projects/scrabble-helper" element={<CaseStudyScrabbleHelper />} />
         <Route path="/projects/portfolio" element={<CaseStudyPortfolio />} />
         <Route path="/projects/three" element={<CaseStudyThree />} />
         <Route path="/projects/four" element={<CaseStudyFour />} />

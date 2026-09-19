@@ -1,4 +1,5 @@
 export const IMAGE_PATHS = {
+  PICKNSPIN: "/assets/images/pick-and-spin/",
   SCRABBLE: "/assets/images/scrabble-helper/",
   PORTFOLIO: "/assets/images/jowee-portfolio/",
   SYMBIO: "/assets/images/symbio/",
@@ -28,8 +29,8 @@ export const createMedia = (
     autoplayOnHover,
     tags: Array.isArray(tags)
       ? tags.map((tag) =>
-          typeof tag === "string" ? { value: tag, title: tag } : tag
-        )
+        typeof tag === "string" ? { value: tag, title: tag } : tag
+      )
       : [],
   };
 };
