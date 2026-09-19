@@ -125,7 +125,8 @@ NAVBAR
   font-family: var(--main-font);
   letter-spacing: 1px;
   stroke-dasharray: 420;
-  stroke-dashoffset: 0; /* visible by default */
+  stroke-dashoffset: 0;
+  /* visible by default */
   animation: draw-stroke 4.6s ease-in-out infinite,
     color-cycle 4.6s ease-in-out infinite;
 }
@@ -134,9 +135,11 @@ NAVBAR
   0% {
     stroke-dashoffset: 0;
   }
+
   50% {
     stroke-dashoffset: 420;
   }
+
   100% {
     stroke-dashoffset: 0;
   }
@@ -146,9 +149,11 @@ NAVBAR
   0% {
     stroke: var(--accent-orange);
   }
+
   50% {
     stroke: var(--accent-cyan);
   }
+
   100% {
     stroke: var(--accent-orange);
   }
@@ -199,8 +204,10 @@ NAVBAR
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.5); /* semi-transparent black */
-  z-index: 5; /* make sure it's above page content but below menu if needed */
+  background: rgba(0, 0, 0, 0.5);
+  /* semi-transparent black */
+  z-index: 5;
+  /* make sure it's above page content but below menu if needed */
 }
 
 /* =============================
@@ -308,10 +315,12 @@ CASE STUDY PAGES
   margin: 0 auto;
   padding: 3rem 2rem;
 }
+
 .case-study h2 {
   margin-top: 0;
   color: var(--accent-orange);
 }
+
 .case-study ul {
   padding-left: 1.25rem;
 }
@@ -390,6 +399,7 @@ SCREENSHOT GRID
 .screenshot-card.sand {
   background: var(--bg-sand);
 }
+
 .screenshot-card.mist {
   background: var(--bg-mist);
 }
@@ -439,6 +449,7 @@ SCREENSHOT GRID
   display: flex;
   flex-wrap: wrap;
   gap: 0.5rem;
+  padding-bottom: inherit;
 }
 
 .tags .tag {
@@ -481,6 +492,7 @@ RESPONSIVENESS
   .project-card {
     flex-direction: column;
   }
+
   .tags {
     gap: 0.4rem 0.5rem;
   }
